@@ -32,13 +32,18 @@ searchToggle.addEventListener('click', () => {
 let lastScroll = 0;
 const navBar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-  const currentScroll = window.scrollY;
-  if (currentScroll > lastScroll && currentScroll > 80) {
-    navBar.classList.add('hide'); // Scroll vers le bas : cache la navbar
-  } else {
-    navBar.classList.remove('hide'); // Scroll vers le haut : affiche la navbar
+// Carousel scroll dynamique
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector('.carousel');
+  const btnLeft = document.querySelector('.carousel-btn.left');
+  const btnRight = document.querySelector('.carousel-btn.right');
+
+  if (carousel && btnLeft && btnRight) {
+    btnLeft.addEventListener('click', () => {
+      carousel.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    btnRight.addEventListener('click', () => {
+      carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    });
   }
-  lastScroll = currentScroll;
-  navBar.classList.toggle('scrolled', currentScroll > 50);
 });

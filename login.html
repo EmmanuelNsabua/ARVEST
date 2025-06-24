@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connexion - Arvest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="style/login.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-content">
+      <!-- Logo image -->
+      <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="Logo Arvest" /></a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="#">Catégories</a>
+        <a href="About.html">À propos</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Rechercher..." />
+          <i class="bx bx-search"></i>
+        </div>
+        <a href="login.html"><button class="login-btn"><i class="bx bx-log-in"></i> Connexion</button></a>
+      </div>
+      <div class="nav-icons">
+        <div class="search-icon" id="search-toggle">
+          <i class="bx bx-search"></i>
+        </div>
+        <div class="burger-menu" id="burger-menu">
+          <i class="bx bx-menu" id="burger-icon"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END NAVBAR -->
+
+  <main>
+    <section class="login-section">
+      <div class="login-card">
+        <h2 class="login-title"><i class="bx bx-log-in"></i> Connexion</h2>
+        <!-- ...existing code... -->
+        <div class="login-social">
+          <button type="button" class="btn social-btn google-btn">
+            <i class="bx bxl-google"></i> Continuer avec Google
+          </button>
+          <button type="button" class="btn social-btn facebook-btn">
+            <i class="bx bxl-facebook"></i> Continuer avec Facebook
+          </button>
+          <div class="login-divider"><span>ou</span></div>
+        </div>
+        <!-- ...existing code... -->
+        <form class="login-form" autocomplete="off">
+          <div class="input-group">
+            <label for="email"><i class="bx bx-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+          </div>
+          <div class="input-group">
+            <label for="password"><i class="bx bx-lock"></i> Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
+          </div>
+          <button type="submit" class="btn primary-btn login-submit"><i class="bx bx-log-in"></i> Se connecter</button>
+        </form>
+        <div class="login-links">
+          <a href="#">Mot de passe oublié ?</a>
+          <span> | </span>
+          <a href="register.html">Créer un compte</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
