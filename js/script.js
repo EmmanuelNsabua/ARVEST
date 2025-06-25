@@ -1,7 +1,7 @@
 // Scroll
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
+  navbar.classList.toggle('scrolled', window.scrollY > 30);
 });
 
 // Burger menu toggle + icône change
