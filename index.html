@@ -13,6 +13,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="style/variables.css" />
 </head>
 <body>
 
@@ -26,7 +27,7 @@
 
       <nav class="nav-links">
         <a href="index.html">Accueil</a>
-        <a href="#">Catégories</a>
+        <a href="explore.html">Explorer</a>
         <a href="About.html">À propos</a>
       </nav>
 
@@ -50,168 +51,253 @@
   <!-- END NAVBAR -->
 
   <!-- HERO BANNER -->
-    <!-- HERO SECTION -->
-
-  <section class="hero">
-  <img src="assets/hero.jpg" alt="Image de conte" class="hero-img">
-  <div class="hero-overlay">
-    <div class="hero-text">
-      <h1>Redonnons vie à nos traditions</h1>
-      <p>
-        Découvrez les contes et proverbes ancestraux qui ont bercé des générations,
-        et contribuez à préserver notre héritage oral.
-      </p>
-      <div class="hero-buttons">
-        <a href="#" class="btn primary-btn"><i class="bx bx-book-open"></i> Explorer</a>
-        <a href="#" class="btn secondary-btn"><i class="bx bx-edit-alt"></i> Contribuer</a>
+  <main class="main-content">
+  <section class="home-hero">
+    <img src="assets/index/hero-banner.jpg" alt="Bannière Arvest" class="home-hero-img">
+    <div class="home-hero-overlay">
+      <div class="home-hero-content">
+        <h1 class="home-hero-title">REDONNONS VIE A <br>NOS TRADITIONS</h1>
+        <p class="home-hero-desc">
+          Découvrez les contes et proverbes ancestraux qui ont <br>bercé des générations, et contribuez à préserver notre <br>héritage oral.
+        </p>
+        <div class="home-hero-rating">
+          <span class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </span>
+          <span class="rating-value">8.0</span>
+        </div>
+        <div class="home-hero-buttons">
+          <a href="explore.html" class="btn primary-btn"><i class="bx bx-play"></i> Explorer</a>
+        </div>
+      </div>
+      <div class="home-hero-carousel">
+        <img src="assets/index/hero-thumb1.jpg" alt="Aperçu 1">
+        <img src="assets/index/hero-banner.jpg" alt="Aperçu 2">
+        <img src="assets/index/hero-thumb3.jpg" alt="Aperçu 3">
+        <img src="assets/index/hero-thumb4.jpg" alt="Aperçu 4">
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Section Extraits de la bibliothèque -->
-<section class="library-preview">
-  <div class="library-header">
-    <h2 class="heading-title">Extraits de la bibliothèque</h2>
-    <div class="carousel-controls">
-      <button class="carousel-btn left"><i class="bx bx-chevron-left"></i></button>
-      <button class="carousel-btn right"><i class="bx bx-chevron-right"></i></button>
+  <!-- CATEGORIES/FILTRES -->
+  <section class="home-categories">
+    <div class="categories-filters">
+      <button class="filter-btn active">Tous</button>
+      <button class="filter-btn">Contes</button>
+      <button class="filter-btn">Proverbes</button>
+      <button class="filter-btn">Auteurs</button>
+      <button class="filter-btn">Thèmes</button>
+      <button class="filter-btn">Autres</button>
     </div>
-  </div>
-  <div class="carousel">
-    <div class="carousel-card" style="background-image: url('assets/conte1.jpg');">
-      <div class="card-overlay">
-        <div>
-          <div class="card-title">Le Lion et le Chacal</div>
-          <div class="card-rating">
-            <span class="stars">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bx-star"></i>
-            </span>
-            <span class="rating-value">4.0</span>
-          </div>
+  </section>
+
+  <!-- SECTION LES PLUS VUS -->
+  <section class="home-most-viewed">
+    <h2 class="section-title">Les plus vus</h2>
+    <div class="most-viewed-cards">
+      <div class="mv-card">
+        <img src="assets/index/conte1.jpg" alt="Conte 1">
+        <div class="mv-card-title">Le lion et le lièvre</div>
+        <div class="mv-card-meta">Conte • 2023</div>
+      </div>
+      <div class="mv-card">
+        <img src="assets/index/conte2.jpg" alt="Conte 2">
+        <div class="mv-card-title">La sagesse du baobab</div>
+        <div class="mv-card-meta">Proverbe • 2023</div>
+      </div>
+      <div class="mv-card">
+        <img src="assets/index/conte3.jpg" alt="Conte 3">
+        <div class="mv-card-title">La tortue et la pluie</div>
+        <div class="mv-card-meta">Conte • 2023</div>
+      </div>
+      <div class="mv-card">
+        <img src="assets/index/conte4.jpg" alt="Conte 4">
+        <div class="mv-card-title">Le léopard rusé</div>
+        <div class="mv-card-meta">Conte • 2023</div>
+      </div>
+      <div class="mv-card">
+        <img src="assets/index/conte5.jpg" alt="Conte 5">
+        <div class="mv-card-title">L’arbre à palabres</div>
+        <div class="mv-card-meta">Thème • 2023</div>
+      </div>
+      <div class="mv-card">
+        <img src="assets/index/conte6.jpg" alt="Conte 6">
+        <div class="mv-card-title">La patience est une vertu</div>
+        <div class="mv-card-meta">Proverbe • 2023</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION VEDETTE -->
+  <section class="home-featured">
+    <div class="featured-banner">
+      <img src="assets/index/featured-banner.jpg" class="home-hero-img" alt="Vedette">
+      <div class="<div class="home-hero-overlay             ">
+        <h3>LE CROCODILE ET LE SINGE</h3>
+        <div class="featured-rating">
+          <span class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </span>
+          <span class="rating-value">8.1</span>
+        </div>
+        <p>
+          Plongez dans l’univers des contes épiques et découvrez la force des héros africains.
+        </p>
+        <a href="#" class="btn primary-btn"><i class="bx bx-play"></i> Lire</a>
+      </div>
+      <div class="featured-thumbs">
+        <img src="assets/featured-thumb1.jpg" alt="Thumb 1">
+        <img src="assets/featured-thumb2.jpg" alt="Thumb 2">
+        <img src="assets/featured-thumb3.jpg" alt="Thumb 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION POPULAIRE -->
+  <section class="home-popular">
+    <h2 class="section-title">Les plus populaires</h2>
+    <div class="popular-cards">
+      <div class="popular-card">
+        <img src="assets/pop1.jpg" alt="Pop 1">
+        <div class="popular-card-title">John Wick</div>
+      </div>
+      <div class="popular-card">
+        <img src="assets/pop2.jpg" alt="Pop 2">
+        <div class="popular-card-title">Kohhra</div>
+      </div>
+      <div class="popular-card">
+        <img src="assets/pop3.jpg" alt="Pop 3">
+        <div class="popular-card-title">Avatar</div>
+      </div>
+      <div class="popular-card">
+        <img src="assets/pop4.jpg" alt="Pop 4">
+        <div class="popular-card-title">The New Lion</div>
+      </div>
+      <div class="popular-card">
+        <img src="assets/pop5.jpg" alt="Pop 5">
+        <div class="popular-card-title">Foundation</div>
+      </div>
+      <div class="popular-card">
+        <img src="assets/pop6.jpg" alt="Pop 6">
+        <div class="popular-card-title">Wanted</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION SÉRIES POPULAIRES -->
+  <section class="home-series">
+    <h2 class="section-title">Séries populaires</h2>
+    <div class="series-cards">
+      <div class="series-card">
+        <img src="assets/serie1.jpg" alt="Série 1">
+        <div class="series-card-title">Stranger Things</div>
+      </div>
+      <div class="series-card">
+        <img src="assets/serie2.jpg" alt="Série 2">
+        <div class="series-card-title">The Boys</div>
+      </div>
+      <div class="series-card">
+        <img src="assets/serie3.jpg" alt="Série 3">
+        <div class="series-card-title">She-Hulk</div>
+      </div>
+      <div class="series-card">
+        <img src="assets/serie4.jpg" alt="Série 4">
+        <div class="series-card-title">Game of Thrones</div>
+      </div>
+      <div class="series-card">
+        <img src="assets/serie5.jpg" alt="Série 5">
+        <div class="series-card-title">1899</div>
+      </div>
+      <div class="series-card">
+        <img src="assets/serie6.jpg" alt="Série 6">
+        <div class="series-card-title">Wanted</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION VEDETTE 2 -->
+  <section class="home-featured2">
+    <div class="featured2-banner">
+      <img src="assets/featured2-banner.jpg" alt="Vedette 2">
+      <div class="featured2-info">
+        <h3>THE FLASH : SAISON 9</h3>
+        <div class="featured2-rating">
+          <span class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </span>
+          <span class="rating-value">7.8</span>
+        </div>
+        <p>
+          Après bien des épreuves, Barry Allen revient pour une nouvelle saison pleine de rebondissements.
+        </p>
+        <a href="#" class="btn primary-btn"><i class="bx bx-play"></i> Lire</a>
+      </div>
+      <div class="featured2-thumbs">
+        <img src="assets/featured2-thumb1.jpg" alt="Thumb 1">
+        <img src="assets/featured2-thumb2.jpg" alt="Thumb 2">
+        <img src="assets/featured2-thumb3.jpg" alt="Thumb 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="home-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-logo">Arvest</div>
+        <div class="footer-social">
+          <i class="bx bxl-facebook"></i>
+          <i class="bx bxl-instagram"></i>
+          <i class="bx bxl-youtube"></i>
+          <i class="bx bxl-twitter"></i>
+        </div>
+        <div class="footer-copy">© 2025 Arvest. Tous droits réservés.</div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="footer-title">Contes</div>
+          <a href="#">Action</a>
+          <a href="#">Comédie</a>
+          <a href="#">Horreur</a>
+          <a href="#">Animation</a>
+          <a href="#">Fantaisie</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">Séries</div>
+          <a href="#">Classiques</a>
+          <a href="#">Nouveautés</a>
+          <a href="#">Comédie</a>
+          <a href="#">Fantaisie</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">Support</div>
+          <a href="#">Aide</a>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Conditions</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">Contact</div>
+          <a href="#">support@arvest.com</a>
+          <a href="#">+243 000 000 000</a>
         </div>
       </div>
     </div>
-    <div class="carousel-card" style="background-image: url('assets/conte2.jpg');">
-      <div class="card-overlay">
-        <div>
-          <div class="card-title">Le Lion et le Chacal</div>
-          <div class="card-rating">
-            <span class="stars">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bx-star"></i>
-            </span>
-            <span class="rating-value">4.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-card" style="background-image: url('assets/conte3.jpg');">
-      <div class="card-overlay">
-        <div>
-          <div class="card-title">Le Lion et le Chacal</div>
-          <div class="card-rating">
-            <span class="stars">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bx-star"></i>
-            </span>
-            <span class="rating-value">4.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-card" style="background-image: url('assets/conte4.jpg');">
-      <div class="card-overlay">
-        <div>
-          <div class="card-title">Le Lion et le Chacal</div>
-          <div class="card-rating">
-            <span class="stars">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bx-star"></i>
-            </span>
-            <span class="rating-value">4.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-card" style="background-image: url('assets/conte6.jpg');">
-      <div class="card-overlay">
-        <div>
-          <div class="card-title">Le Lion et le Chacal</div>
-          <div class="card-rating">
-            <span class="stars">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bx-star"></i>
-            </span>
-            <span class="rating-value">4.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-card" style="background-image: url('assets/conte7.jpg');">
-      <div class="card-overlay">
-        <div>
-          <div class="card-title">Le Lion et le Chacal</div>
-          <div class="card-rating">
-            <span class="stars">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bx-star"></i>
-            </span>
-            <span class="rating-value">4.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-card" style="background-image: url('assets/conte8.jpg');">
-      <div class="card-overlay">
-        <div>
-          <div class="card-title">Le Lion et le Chacal</div>
-          <div class="card-rating">
-            <span class="stars">
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bxs-star"></i>
-              <i class="bx bx-star"></i>
-            </span>
-            <span class="rating-value">4.0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-card more-card">
-      <div class="more-card-bg"></div>
-      <button class="more-card-btn"><i class="bx bx-plus"></i> Explorer Plus</button>
-    </div>
-    <!-- Ajoute d'autres cartes si besoin -->
-  </div>
-</section>
+  </footer>
+  </main>
 
-<!-- END Extraits de la bibliothèque -->
-
-
-
-
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore | Arvest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="style/explore.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-content">
+      <!-- Logo image -->
+      <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="Logo Arvest" /></a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="explore.html">Explorer</a>
+        <a href="About.html">À propos</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Rechercher..." />
+          <i class="bx bx-search"></i>
+        </div>
+        <a href="login.html"><button class="login-btn"><i class="bx bx-log-in"></i> Connexion</button></a>
+      </div>
+      <div class="nav-icons">
+        <div class="search-icon" id="search-toggle">
+          <i class="bx bx-search"></i>
+        </div>
+        <div class="burger-menu" id="burger-menu">
+          <i class="bx bx-menu" id="burger-icon"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END NAVBAR -->
+
+  <!-- HERO BANNER -->
+  <section class="explore-hero">
+  <img src="assets/explorer-hero.jpg" alt="Illustration Explore" class="explore-hero-img">
+  <div class="explore-hero-overlay">
+    <h1>Explorez la richesse des contes, proverbes et traditions du Katanga</h1>
+    <p>
+      Parcourez notre bibliothèque vivante, découvrez des histoires inspirantes, des proverbes pleins de sagesse et plongez au cœur de la culture orale africaine.
+    </p>
+  </div>
+</section>
+
+  <!-- SPECIAL OFFERS (adapté pour Arvest) -->
+  <section class="explore-special-offers">
+    <h2>À la une</h2>
+    <div class="explore-offers-grid">
+      <div class="explore-offer-card">
+        <img src="assets/offer-conte.jpg" alt="Conte vedette">
+        <div class="explore-offer-info">
+          <div class="explore-offer-title">Le lion et le lièvre</div>
+          <div class="explore-offer-meta">Conte traditionnel • 4.8 ★</div>
+          <div class="explore-offer-desc">Un conte populaire du Katanga sur la ruse et le courage.</div>
+        </div>
+      </div>
+      <div class="explore-offer-card">
+        <img src="assets/offer-proverbe.jpg" alt="Proverbe vedette">
+        <div class="explore-offer-info">
+          <div class="explore-offer-title">"La patience est une vertu"</div>
+          <div class="explore-offer-meta">Proverbe • 4.7 ★</div>
+          <div class="explore-offer-desc">Un proverbe qui enseigne la sagesse et la persévérance.</div>
+        </div>
+      </div>
+      <div class="explore-offer-card">
+        <img src="assets/offer-theme.jpg" alt="Thème vedette">
+        <div class="explore-offer-info">
+          <div class="explore-offer-title">Thème : Animaux</div>
+          <div class="explore-offer-meta">+120 histoires</div>
+          <div class="explore-offer-desc">Découvrez les contes et proverbes mettant en scène les animaux.</div>
+        </div>
+      </div>
+      <div class="explore-offer-card">
+        <img src="assets/offer-auteur.jpg" alt="Auteur vedette">
+        <div class="explore-offer-info">
+          <div class="explore-offer-title">Auteur : M. Kalaba</div>
+          <div class="explore-offer-meta">Conteur • 4.9 ★</div>
+          <div class="explore-offer-desc">Un des plus grands conteurs du Katanga, gardien de la tradition orale.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="explore-categories">
+    <h2>Catégories</h2>
+    <div class="explore-categories-grid">
+      <a href="#" class="explore-category-card">
+        <div class="explore-category-img" style="background-image: url('assets/categorie-contes.jpg');">
+          <i class="bx bx-book-open"></i>
+        </div>
+        <div class="explore-category-title">Contes</div>
+        <div class="explore-category-desc">Histoires traditionnelles</div>
+      </a>
+      <a href="#" class="explore-category-card">
+        <div class="explore-category-img" style="background-image: url('assets/categorie-proverbes.jpg');">
+          <i class="bx bx-chat"></i>
+        </div>
+        <div class="explore-category-title">Proverbes</div>
+        <div class="explore-category-desc">Sagesse populaire</div>
+      </a>
+      <a href="#" class="explore-category-card">
+        <div class="explore-category-img" style="background-image: url('assets/categorie-auteurs.jpg');">
+          <i class="bx bx-user"></i>
+        </div>
+        <div class="explore-category-title">Auteurs</div>
+        <div class="explore-category-desc">Conteurs & collecteurs</div>
+      </a>
+      <a href="#" class="explore-category-card">
+        <div class="explore-category-img" style="background-image: url('assets/categorie-themes.jpg');">
+          <i class="bx bx-palette"></i>
+        </div>
+        <div class="explore-category-title">Thèmes</div>
+        <div class="explore-category-desc">Animaux, famille, etc.</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- POPULAR DESTINATIONS (adapté pour Arvest) -->
+  <section class="explore-popular">
+    <h2>Populaires</h2>
+    <div class="explore-popular-grid">
+      <div class="explore-popular-large" style="background-image: url('assets/populaire1.jpg');">
+        <div class="explore-popular-info">
+          <div class="explore-popular-title">Le crocodile et le singe</div>
+          <div class="explore-popular-meta">Conte • 4.9 ★</div>
+        </div>
+      </div>
+      <div class="explore-popular-small-group">
+        <div class="explore-popular-small" style="background-image: url('assets/populaire2.jpg');">
+          <div class="explore-popular-info">
+            <div class="explore-popular-title">La sagesse du vieux baobab</div>
+            <div class="explore-popular-meta">Proverbe</div>
+          </div>
+        </div>
+        <div class="explore-popular-small" style="background-image: url('assets/populaire3.jpg');">
+          <div class="explore-popular-info">
+            <div class="explore-popular-title">La tortue et la pluie</div>
+            <div class="explore-popular-meta">Conte</div>
+          </div>
+        </div>
+      </div>
+      <div class="explore-popular-small-group">
+        <div class="explore-popular-small" style="background-image: url('assets/populaire4.jpg');">
+          <div class="explore-popular-info">
+            <div class="explore-popular-title">Le léopard rusé</div>
+            <div class="explore-popular-meta">Conte</div>
+          </div>
+        </div>
+        <div class="explore-popular-small" style="background-image: url('assets/populaire5.jpg');">
+          <div class="explore-popular-info">
+            <div class="explore-popular-title">L’arbre à palabres</div>
+            <div class="explore-popular-meta">Thème</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="explore-blog">
+    <h2>Blog</h2>
+    <div class="explore-blog-grid">
+      <a href="#" class="explore-blog-card">
+        <img src="assets/blog1.jpg" alt="Blog 1">
+        <div class="explore-blog-info">
+          <div class="explore-blog-title">Pourquoi raconter les contes aux enfants ?</div>
+          <div class="explore-blog-desc">Découvrez l'importance de la transmission orale dans l'éducation.</div>
+        </div>
+      </a>
+      <a href="#" class="explore-blog-card">
+        <img src="assets/blog2.jpg" alt="Blog 2">
+        <div class="explore-blog-info">
+          <div class="explore-blog-title">La sagesse des proverbes africains</div>
+          <div class="explore-blog-desc">Un voyage au cœur des proverbes et de leur signification.</div>
+        </div>
+      </a>
+      <a href="#" class="explore-blog-card">
+        <img src="assets/blog3.jpg" alt="Blog 3">
+        <div class="explore-blog-info">
+          <div class="explore-blog-title">Portrait d’un conteur du Katanga</div>
+          <div class="explore-blog-desc">Rencontre avec un gardien de la tradition orale.</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER 
+  <footer class="explore-footer">
+    <div class="explore-footer-main">
+      <div class="explore-footer-brand">
+        <div class="explore-logo">Arvest</div>
+        <div class="explore-footer-social">
+          <i class="bx bxl-facebook"></i>
+          <i class="bx bxl-instagram"></i>
+          <i class="bx bxl-youtube"></i>
+          <i class="bx bxl-twitter"></i>
+        </div>
+        <div class="explore-footer-copy">© 2025 Arvest. Tous droits réservés.</div>
+      </div>
+      <div class="explore-footer-cols">
+        <div class="explore-footer-col">
+          <div class="explore-footer-title">Accès rapide</div>
+          <a href="#">Accueil</a>
+          <a href="#">Explorer</a>
+          <a href="#">Catégories</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="explore-footer-col">
+          <div class="explore-footer-title">Aide</div>
+          <a href="#">FAQ</a>
+          <a href="#">Conditions</a>
+          <a href="#">Assistance</a>
+        </div>
+        <div class="explore-footer-col">
+          <div class="explore-footer-title">À propos</div>
+          <a href="#">Notre mission</a>
+          <a href="#">L'équipe</a>
+          <a href="#">Partenaires</a>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>

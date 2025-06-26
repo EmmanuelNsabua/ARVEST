@@ -12,191 +12,202 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style/main.css" />
+   <link rel="stylesheet" href="style/main.css" />
   <link rel="stylesheet" href="style/about.css" />
 </head>
 <body>
     <!-- NAVBAR -->
-    <header class="navbar">
-      <div class="navbar-content">
-        <!-- Logo image -->
-        <div class="logo">
-          <a href="index.html"><img src="assets/logo.png" alt="Logo Arvest" /></a>
+  <header class="navbar">
+    <div class="navbar-content">
+      <!-- Logo image -->
+      <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="Logo Arvest" /></a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="explore.html">Explorer</a>
+        <a href="About.html">À propos</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Rechercher..." />
+          <i class="bx bx-search"></i>
         </div>
-      
-        <nav class="nav-links">
-          <a href="index.html">Accueil</a>
-          <a href="#">Catégories</a>
-          <a href="About.html">À propos</a>
-        </nav>
-      
-        <div class="nav-actions">
-          <div class="search-box">
-            <input type="text" placeholder="Rechercher..." />
-            <i class="bx bx-search"></i>
-          </div>
-          <a href="login.html"><button class="login-btn"><i class="bx bx-log-in"></i> Connexion</button></a>
+        <a href="login.html"><button class="login-btn"><i class="bx bx-log-in"></i> Connexion</button></a>
+      </div>
+      <div class="nav-icons">
+        <div class="search-icon" id="search-toggle">
+          <i class="bx bx-search"></i>
         </div>
-        <div class="nav-icons">
-          <div class="search-icon" id="search-toggle">
-            <i class="bx bx-search"></i>
-          </div>
-          <div class="burger-menu" id="burger-menu">
-            <i class="bx bx-menu" id="burger-icon"></i>
-          </div>
+        <div class="burger-menu" id="burger-menu">
+          <i class="bx bx-menu" id="burger-icon"></i>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
+  <!-- END NAVBAR -->
 
-    <main class="about-main">
-        <!-- HERO/INTRO -->
-        <section class="about-hero-banner">
-            <div class="about-hero-content">
-                <span class="about-hero-icon"><i class="bx bx-trophy"></i></span>
-                <h1 class="about-hero-title">À propos d’Arvest</h1>
-                <p class="about-hero-desc">
-                    Plateforme collaborative pour la sauvegarde et la valorisation des contes, proverbes et arts du Katanga.<br>
-                    <span class="about-mission">Notre mission : préserver ce patrimoine culturel unique et le partager avec le monde.</span>
+    <!-- Home -->
+    <section class="home">
+        <!-- Home_page_Content -->
+        <div class="home_page_content">
+            <span>
+                <i class="fa-solid fa-trophy"></i>
+                <p> 5th consistent award winning Year!</p>
+            </span>
+            <h1 class="title">Maison d'auto édition <br> solution  </h1>
+            <p class="text"> Une description du paragraphe pour proves <br> aux clients que c'est bon</p>
+            <button class="White_btn"> Découvrez votre proget <i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    
+        <!-- Image_box 
+        <div class="Image_box">
+             <img src="Image Arvest/02.png" alt="Image_box"> 
+            <p>Provine du Haut-Katanga <br> ville de lubumbashi C/Kampamba Q/ Bel-air Av/ Kinkole N°1</p>
+        </div> -->
+    </section> 
+
+ <!-- text-section -->
+
+    <section class="text_section">
+        <p class="text_section p">Lecture</p>
+        <h2>La lecture des oeuvres et l'édition des oeuvres est gratuite!</h2>
+    </section>
+
+ <!-- Owner -->
+
+ <section class="Owner">
+        <div class="Image_box_owner">
+            <img src="assets/populaire5.jpg" alt="image3">
+            <p> livres pour les grands et petits</p>
+        </div>
+        <div class="content_box">
+            <h2 class="small_title">ESTABLISMED MMXVIII</h2>
+            <h3 class="Big_title">Interior design firm based in RDC</h3>
+            <p>A descriptive paragraph that tells clients how good you are and proves that you are the best choice
+            thta they've made. This paragraph is also fort those who are looking out for relisable design 
+            firm.</p>
+            
+            <p>You can use a few enticing words and flaunt your capabilities that will attract future clients and
+                encourage them to hire you right away</p>
+            
+                <button class="White_btn Dark_btn"> Know More </button>
+        </div>
+ </section>
+ <!-- Background -->
+  <div class="Background">
+        <div class="text-box">
+            <span>OUR RECENT</span>
+            <h3>Award Winnig Projects</h3>
+            <p> A descrptive paragraph that tells clients how good you are and proves that you are the best choice that they've made.</p>
+            <p>This paragraph is also for those who are looking out for a reliable interior design firm.</p>
+        
+            <h6>My Interior design Firm of The Year. </h6>
+            <h6> Us Best Interior Firm.</h6>
+            <h6>International Design Awrads Nominee.</h6>
+            <button class="White_btn Dark_btn"> View all project </button>
+        
+        </div>
+        <div class="image">
+            <img src="Pins/5fffc359e26380c0d9d530d862bdc1bb.jpg" alt="img2">
+        </div>
+    </div>
+   <!-- text-section -->
+    <section class="text_big">
+        <p>every space <br> count</p>
+        <h2>Why Choose Us </h2>
+    </section>
+    <!-- reasons -->
+    <section class="reasons">
+        <div class="services">
+            <div class="box">
+                <h2>Building Planning</h2>
+                <p>This is a short description elaboring the service 
+                    you have mentionned above.
                 </p>
             </div>
-            <div class="about-hero-images">
-                <img src="assets/hero1.jpg" alt="Enfants écoutant un conte" class="about-hero-img">
-                <img src="assets/hero2.jpg" alt="Artiste Katangais" class="about-hero-img">
-                <img src="assets/hero3.jpg" alt="Classe scolaire" class="about-hero-img">
-                <img src="assets/hero4.jpg" alt="Sage africain" class="about-hero-img">
+            <div class="box">
+                <h2>Building Planning</h2>
+                <p>This is a short description elaboring the service 
+                    you have mentionned above.
+                </p>
             </div>
-        </section>
-
-        <!-- SECTION 1 -->
-        <section class="about-section">
-            <div class="about-section-row">
-                <div class="about-section-col">
-                    <h2>Nous valorisons la culture katangaise</h2>
-                    <p>
-                        Arvest s’engage à transmettre les histoires, proverbes et arts du Katanga à travers des formats modernes (texte, audio, image) pour tous : jeunes, écoles, artistes et chercheurs.
-                    </p>
-                </div>
-                <div class="about-section-col">
-                    <p>
-                        <strong>Le saviez-vous ?</strong><br>
-                        <span class="about-danger">80% des contes oraux du Katanga risquent de disparaître d’ici 2030</span> <small>(UNESCO RDC)</small>.
-                    </p>
-                </div>
+            <div class="box">
+                <h2>Building Planning</h2>
+                <p>This is a short description elaboring the service 
+                    you have mentionned above.
+                </p>
             </div>
-        </section>
-
-        <!-- SECTION 2 -->
-        <section class="about-section about-section-alt">
-            <div class="about-section-row">
-                <div class="about-section-col about-section-img">
-                    <img src="assets/patrimoine.jpg" alt="Patrimoine oral">
-                </div>
-                <div class="about-section-col">
-                    <h2>Comment ça marche ?</h2>
-                    <div class="about-cards">
-                        <div class="about-card">
-                            <h3><i class="bx bx-globe"></i> Pour les visiteurs</h3>
-                            <ul>
-                                <li><i class="bx bx-compass"></i> Explorer librement les contes et proverbes</li>
-                                <li><i class="bx bx-heart"></i> Aimer vos favoris</li>
-                                <li><i class="bx bx-share-alt"></i> Partager avec vos proches</li>
-                            </ul>
-                        </div>
-                        <div class="about-card">
-                            <h3><i class="bx bx-edit"></i> Pour les contributeurs</h3>
-                            <ul>
-                                <li><i class="bx bx-upload"></i> Publier vos histoires ou œuvres</li>
-                                <li><i class="bx bx-check-shield"></i> Validation par un comité local</li>
-                                <li><i class="bx bx-cloud-upload"></i> Publication sur la plateforme</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            
+        </div>
+        <div class="services">
+            <div class="box">
+                <h2>Building Planning</h2>
+                <p>This is a short description elaboring the service 
+                    you have mentionned above.
+                </p>
             </div>
-        </section>
-
-        <!-- SECTION 3 -->
-        <section class="about-section">
-            <div class="about-section-row">
-                <div class="about-section-col">
-                    <h2>Nos engagements</h2>
-                    <ul>
-                        <li><i class="bx bx-shield-quarter"></i> Authenticité : Tous les contenus sont vérifiés par des gardiens de la tradition.</li>
-                        <li><i class="bx bx-gift"></i> Gratuité : L’accès à la plateforme est 100% gratuit pour tous.</li>
-                        <li><i class="bx bx-id-card"></i> Transparence : Chaque auteur ou contributeur est crédité.</li>
-                    </ul>
-                </div>
-                <div class="about-section-col about-section-img">
-                    <img src="assets/engagement.jpg" alt="Engagement Arvest">
-                </div>
+            <div class="box">
+                <h2>Building Planning</h2>
+                <p>This is a short description elaboring the service 
+                    you have mentionned above.
+                </p>
             </div>
-        </section>
-
-        <!-- SECTION 4 -->
-        <section class="about-section about-section-alt">
-            <div class="about-section-row">
-                <div class="about-section-col about-section-img">
-                    <img src="assets/equipe.jpg" alt="Équipe Arvest">
-                </div>
-                <div class="about-section-col">
-                    <h2>Qui sommes-nous ?</h2>
-                    <ul>
-                        <li><i class="bx bx-user-circle"></i> Équipe : Trois développeurs katangais + 12 conseillers culturels.</li>
-                        <li><i class="bx bx-handshake"></i> Partenaires : Institut Français, écoles locales, radios communautaires.</li>
-                    </ul>
-                </div>
+            <div class="box">
+                <h2>Building Planning</h2>
+                <p>This is a short description elaboring the service 
+                    you have mentionned above.
+                </p>
             </div>
-        </section>
-
-        <!-- SECTION 5 -->
-        <section class="about-section">
-            <div class="about-section-row">
-                <div class="about-section-col">
-                    <h2>Notre vision</h2>
-                    <ul>
-                        <li><i class="bx bx-bullseye"></i> À court terme : Devenir la référence culturelle en RDC.</li>
-                        <li><i class="bx bx-world"></i> À long terme : Étendre à toutes les provinces congolaises.</li>
-                    </ul>
-                </div>
-                <div class="about-section-col about-section-img">
-                    <img src="assets/vision.jpg" alt="Vision Arvest">
-                </div>
+            
+        </div>
+        
+    </section>
+    <!-- testimonials -->
+     <section class="testimonials">
+        <div class="left">
+            <h2 class="small_title">TESTIMONIALS</h2>
+            <h3 class="Big_title">What Our Clients Say.</h3>
+            <p class="text">This is short description elaboring the service you have <br> mentioned above.</p>
+            <div class="comment">
+                <p>Commentaire le code est ma vie, je suis heureux quand je code, je gagne quand je comprend le code . 
+                    Je grandis et me crée ma place en ce monde par le code.</p>
+                    <div class="profil"><img src="Pins/e7700318a64e56b77a6e81d87664b160 (1).jpg" alt=""><span>Allan KASONGO</span></div>
             </div>
-        </section>
-
-        <!-- SECTION 6 -->
-        <section class="about-section about-section-faq">
-            <h2><i class="bx bx-question-mark"></i> FAQ Express</h2>
-            <div class="about-faq-list">
-                <div class="about-faq-item">
-                    <strong>Puis-je utiliser vos contes dans mon école ?</strong>
-                    <p><i class="bx bx-check-circle"></i> Oui, tout est accessible gratuitement pour les enseignants et élèves !</p>
-                </div>
-                <div class="about-faq-item">
-                    <strong>Comment contribuer ?</strong>
-                    <p><i class="bx bx-user-plus"></i> Il suffit de créer un compte (moins de 2 minutes) puis de proposer vos histoires ou œuvres.</p>
-                </div>
+        </div>
+        <div class="right">
+            <div class="comment down">
+                <p>Commentaire le code est ma vie, je suis heureux quand je code, je gagne quand je comprend le code . 
+                    Je grandis et me crée ma place en ce monde par le code.</p>
+                    <div class="profil"><img src="Pins/c2a0337b4f31d857df60bcada1f5dd50.jpg" alt=""><span>Lucius Castus</span></div>
             </div>
-        </section>
-
-        <!-- SECTION 7 -->
-        <section class="about-section about-section-cta">
-            <div class="about-section-row">
-                <div class="about-section-col about-section-img">
-                    <img src="assets/community.jpg" alt="Communauté Arvest" class="about-img-cta">
-                </div>
-                <div class="about-section-col">
-                    <h2><i class="bx bx-megaphone"></i> Rejoignez-nous !</h2>
-                    <p>
-                        Vous souhaitez participer à la sauvegarde et à la valorisation du patrimoine oral katangais ?<br>
-                        <a href="#" id="cta-principal"><i class="bx bx-edit-alt"></i> Contribuez dès maintenant</a>
-                        <a href="charte.pdf" id="cta-secondaire" download><i class="bx bx-download"></i> Télécharger notre charte</a>
-                    </p>
-                </div>
+            <div class="comment">
+                <p>Aptent mus quisque poryiror convallis tempora eaque blandit phasellus perspiciatis lectus,
+                    exercitationen.</p>
+                    <div class="profil"> <img src="Pins/05a284b8885ed1c0a15a853c61e55f85.jpg" alt=""><span>Eliano Arthorius</span></div>
+                
             </div>
-        </section>
-    </main>
-
-    <script src="js/script.js"></script>
+        </div>
+     </section>
+    <!-- ranked -->
+     <div class="ranked">
+        <h3 class="Big_title">Best Ranked By </h3>
+    
+        <div class="logos">
+            <img src="assets/logo.png" alt="">
+            <img src="assets/logo.png" alt="">
+            <img src="assets/logo.png" alt="">
+            <img src="assets/logo.png" alt="">
+            <img src="assets/logo.png" alt="">
+        </div>
+     </div>
+    
+     <footer>
+        <p> Tous les droits sont réservés &#169;2024 par @Alkaskit</p>
+     </footer>
+    
+     <script src="js/script.js"></script>
 </body>
 </html>
