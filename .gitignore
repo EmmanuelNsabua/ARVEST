@@ -1,0 +1,19 @@
+# Dépendances Node.js
+node_modules/
+
+# Fichiers de build et distribution
+dist/
+
+# Configurations d’éditeur
+.vscode/
+.idea/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Variables d’environnement
+.env
