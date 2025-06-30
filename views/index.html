@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arvest Congo - Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../dist/output.css"/>
+</head>
+<body class="bg-[#f5f8fa] font-poppins text-gray-800 transition-all duration-300">
+  <!-- NAVBAR (chargée dynamiquement) -->
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="relative w-full h-screen flex items-center bg-gray-900 overflow-hidden">
+      <!-- Image de fond dynamique -->
+      <div class="absolute inset-0 z-0">
+        <img id="hero-bg" src="https://ik.imagekit.io/melfuviii/Arvest/assets/index/IMG-20240608-WA0032.jpg?updatedAt=1751245163105" alt="Bannière" class="w-full h-full object-cover object-center brightness-75" />
+      </div>
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent z-10"></div>
+
+      <!-- Desktop/tablette : texte à gauche + carousel -->
+      <div class="relative z-20 w-full max-w-7xl mx-auto flex items-center h-full px-8 md:flex-row flex-col">
+        <!-- Texte principal à gauche (desktop/tablette) -->
+        <div class="flex flex-col justify-center h-full max-w-lg mr-12 md:items-start items-center text-center md:text-left
+          md:py-0 py-16 md:px-0 px-4">
+          <span class="text-lg text-orange-400 font-semibold mb-2 md:block hidden">Culture congolaise</span>
+          <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg md:block hidden">
+            Découvrez la richesse<br>
+            <span class="text-orange-400">des contes congolais</span>
+          </h1>
+          <p class="text-lg text-gray-100 mb-8 max-w-md md:block hidden">
+            Plongez dans l’univers fascinant des histoires, proverbes et coutumes qui font la fierté de la culture congolaise.
+          </p>
+          <a href="#contes" class="inline-flex items-center gap-3 px-8 py-3 bg-orange-500 text-white rounded-full font-semibold shadow-xl hover:bg-orange-600 transition text-lg w-max md:flex hidden">
+            <i class="bx bx-book-open text-2xl"></i>
+            Explorer
+          </a>
+        </div>
+        <!-- Carrousel de cartes au centre (desktop/tablette uniquement) -->
+        <div class="flex-1 flex flex-col items-center justify-center md:flex hidden transition-all duration-300">
+          <div class="flex items-end justify-center gap-0 relative h-[340px] transition-all duration-300">
+            <!-- Carte 1 (active) -->
+            <div class="relative z-30 scale-110 shadow-2xl ring-4 ring-orange-500 bg-white rounded-3xl overflow-hidden h-[320px] w-[220px] mx-0 transition-all duration-300">
+              <img src="https://ik.imagekit.io/melfuviii/Arvest/assets/index/IMG-20240608-WA0032.jpg?updatedAt=1751245163105" alt="Conte" class="w-full h-full object-cover" />
+              <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/30 to-transparent px-5 py-4">
+                <h3 class="text-white font-bold text-xl mb-1">Contes du Congo</h3>
+                <span class="text-sm text-orange-200">Culture & Sagesse</span>
+              </div>
+            </div>
+            <!-- Carte 2 -->
+            <div class="relative z-20 scale-95 shadow-lg bg-white rounded-3xl overflow-hidden h-[260px] w-[170px] -ml-8 transition-all duration-300">
+              <img src="https://ik.imagekit.io/melfuviii/Arvest/assets/index/Carnival-of-Lubumbashi.jpg?updatedAt=1751245166268" alt="Proverbe" class="w-full h-full object-cover" />
+              <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/30 to-transparent px-4 py-3">
+                <h3 class="text-white font-semibold text-base mb-1">Carnaval Lubumbashi</h3>
+              </div>
+            </div>
+            <!-- Carte 3 -->
+            <div class="relative z-10 scale-90 shadow bg-white rounded-3xl overflow-hidden h-[220px] w-[140px] -ml-8 transition-all duration-300">
+              <img src="https://ik.imagekit.io/melfuviii/Arvest/assets/index/Les%20Bamil%C3%A9k%C3%A9s,%20groupe%20ethnique%20du%20Cameroun.jpg?updatedAt=1751245163505" alt="Coutume" class="w-full h-full object-cover" />
+              <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/30 to-transparent px-3 py-2">
+                <h3 class="text-white font-semibold text-sm">Bamilékés</h3>
+              </div>
+            </div>
+            <!-- Carte 4 -->
+            <div class="relative z-0 scale-90 shadow bg-white rounded-3xl overflow-hidden h-[180px] w-[110px] -ml-8 transition-all duration-300">
+              <img src="https://ik.imagekit.io/melfuviii/Arvest/assets/index/Culture-of-Congo-People.jpg?updatedAt=1751245163495" alt="Sagesse" class="w-full h-full object-cover" />
+              <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/30 to-transparent px-2 py-1">
+                <h3 class="text-white font-semibold text-xs">Culture</h3>
+              </div>
+            </div>
+          </div>
+          <!-- Flèches navigation -->
+          <div class="flex items-center justify-center gap-4 mt-6">
+            <button class="w-10 h-10 rounded-full bg-white/80 hover:bg-orange-500 flex items-center justify-center shadow transition">
+              <i class="bx bx-chevron-left text-2xl text-gray-700"></i>
+            </button>
+            <button class="w-10 h-10 rounded-full bg-white/80 hover:bg-orange-500 flex items-center justify-center shadow transition">
+              <i class="bx bx-chevron-right text-2xl text-gray-700"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile : texte centré sur image, carousel masqué -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:hidden z-20">
+          <span class="text-base text-orange-400 font-semibold mb-2">Culture congolaise</span>
+          <h1 class="text-3xl font-extrabold text-white mb-4 leading-tight drop-shadow-lg">
+            Découvrez<br>
+            <span class="text-orange-400">les contes congolais</span>
+          </h1>
+          <p class="text-base text-gray-100 mb-6 max-w-xs">
+            Plongez dans les histoires, proverbes et coutumes du Congo.
+          </p>
+          <a href="#contes" class="inline-flex items-center gap-2 px-6 py-2 bg-orange-500 text-white rounded-full font-semibold shadow-lg hover:bg-orange-600 transition text-base">
+            <i class="bx bx-book-open text-xl"></i>
+            Explorer
+          </a>
+          <span class="mt-8 text-xs text-gray-200 opacity-80 flex items-center gap-1">
+            <i class="bx bx-chevrons-left"></i>
+            Glissez pour découvrir
+            <i class="bx bx-chevrons-right"></i>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES/FILTRES -->
+    <section class="max-w-4xl mx-auto mt-10 px-4">
+      <div class="flex flex-wrap gap-3 justify-center">
+        <button class="px-5 py-2 rounded-full bg-orange-100 text-orange-600 font-semibold shadow hover:bg-orange-200 transition">Tous</button>
+        <button class="px-5 py-2 rounded-full bg-gray-100 text-gray-700 font-semibold shadow hover:bg-orange-200 hover:text-orange-600 transition">Contes</button>
+        <button class="px-5 py-2 rounded-full bg-gray-100 text-gray-700 font-semibold shadow hover:bg-orange-200 hover:text-orange-600 transition">Proverbes</button>
+        <button class="px-5 py-2 rounded-full bg-gray-100 text-gray-700 font-semibold shadow hover:bg-orange-200 hover:text-orange-600 transition">Coutumes</button>
+        <button class="px-5 py-2 rounded-full bg-gray-100 text-gray-700 font-semibold shadow hover:bg-orange-200 hover:text-orange-600 transition">Sagesse</button>
+        <button class="px-5 py-2 rounded-full bg-gray-100 text-gray-700 font-semibold shadow hover:bg-orange-200 hover:text-orange-600 transition">Langues</button>
+      </div>
+    </section>
+
+    <!-- SECTION CONTES -->
+    <section id="contes" class="max-w-6xl mx-auto mt-16 px-4">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-[#1b263b]">Contes congolais populaires</h2>
+        <a href="#" class="text-orange-600 font-semibold hover:underline">Voir tous les contes</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Exemple de carte conte -->
+        <div class="bg-white rounded-xl shadow p-5 flex flex-col gap-3 hover:shadow-lg transition">
+          <img src="../assets/index/conte1.jpg" alt="Conte" class="rounded-lg h-40 w-full object-cover mb-2">
+          <h3 class="font-semibold text-lg text-[#1b263b]">Le léopard et la tortue</h3>
+          <p class="text-gray-600 text-sm">Un conte du Kasaï sur la ruse et la sagesse face à la force brute.</p>
+          <div class="flex items-center gap-2 mt-2">
+            <span class="flex gap-1 text-orange-400 text-base">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bx-star"></i>
+            </span>
+            <span class="text-gray-700 text-sm">4.0</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 flex flex-col gap-3 hover:shadow-lg transition">
+          <img src="../assets/index/conte2.jpg" alt="Conte" class="rounded-lg h-40 w-full object-cover mb-2">
+          <h3 class="font-semibold text-lg text-[#1b263b]">La princesse et le crocodile</h3>
+          <p class="text-gray-600 text-sm">Un récit du fleuve Congo sur le courage et la générosité.</p>
+          <div class="flex items-center gap-2 mt-2">
+            <span class="flex gap-1 text-orange-400 text-base">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bx-star"></i><i class="bx bx-star"></i>
+            </span>
+            <span class="text-gray-700 text-sm">3.0</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 flex flex-col gap-3 hover:shadow-lg transition">
+          <img src="../assets/index/conte3.jpg" alt="Conte" class="rounded-lg h-40 w-full object-cover mb-2">
+          <h3 class="font-semibold text-lg text-[#1b263b]">Le singe et le tam-tam magique</h3>
+          <p class="text-gray-600 text-sm">Un conte du Bandundu sur la musique et la solidarité.</p>
+          <div class="flex items-center gap-2 mt-2">
+            <span class="flex gap-1 text-orange-400 text-base">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i>
+            </span>
+            <span class="text-gray-700 text-sm">5.0</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 flex flex-col gap-3 hover:shadow-lg transition">
+          <img src="../assets/index/conte4.jpg" alt="Conte" class="rounded-lg h-40 w-full object-cover mb-2">
+          <h3 class="font-semibold text-lg text-[#1b263b]">La lune et le lièvre</h3>
+          <p class="text-gray-600 text-sm">Une légende du Katanga expliquant les cycles de la lune.</p>
+          <div class="flex items-center gap-2 mt-2">
+            <span class="flex gap-1 text-orange-400 text-base">
+              <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bx-star"></i><i class="bx bx-star"></i>
+            </span>
+            <span class="text-gray-700 text-sm">3.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION PROVERBES & SAGESS -->
+    <section id="proverbes" class="max-w-6xl mx-auto mt-16 px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Proverbes & sagesses congolaises</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-md p-7 flex flex-col items-center text-center border border-gray-100">
+          <!-- IMAGE -->
+          <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-4">
+            <i class="bx bxs-quote-alt-left text-3xl text-orange-500"></i>
+          </div>
+          <p class="text-lg italic text-gray-900 mb-2">« Le fleuve ne rejette jamais l’eau qui vient à lui. »</p>
+          <span class="text-sm text-gray-500">Proverbe Kongo</span>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-7 flex flex-col items-center text-center border border-gray-100">
+          <!-- IMAGE -->
+          <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-4">
+            <i class="bx bxs-quote-alt-left text-3xl text-orange-500"></i>
+          </div>
+          <p class="text-lg italic text-gray-900 mb-2">« Un arbre seul ne fait pas la forêt. »</p>
+          <span class="text-sm text-gray-500">Proverbe Luba</span>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-7 flex flex-col items-center text-center border border-gray-100">
+          <!-- IMAGE -->
+          <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-4">
+            <i class="bx bxs-quote-alt-left text-3xl text-orange-500"></i>
+          </div>
+          <p class="text-lg italic text-gray-900 mb-2">« La parole est comme l’œuf, une fois tombée, elle ne revient plus. »</p>
+          <span class="text-sm text-gray-500">Proverbe Mongo</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION COUTUMES -->
+    <section id="coutumes" class="max-w-6xl mx-auto mt-20 px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Coutumes & traditions locales</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-md p-0 flex flex-col overflow-hidden border border-gray-100">
+          <!-- IMAGE -->
+          <div class="h-40 w-full bg-gray-200 flex items-center justify-center">
+            <!-- IMAGE COUTUME 1 -->
+            <!-- <img src="..." alt="Coutume" class="w-full h-full object-cover"> -->
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-semibold text-lg text-gray-900 mb-2">La dot chez les Bakongo</h3>
+            <p class="text-gray-600 text-sm mb-2">Découvrez les étapes et la symbolique de la dot dans la culture Bakongo, un moment clé de la vie sociale.</p>
+            <span class="text-xs text-orange-600 font-semibold">Tradition Bakongo</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-0 flex flex-col overflow-hidden border border-gray-100">
+          <div class="h-40 w-full bg-gray-200 flex items-center justify-center">
+            <!-- IMAGE COUTUME 2 -->
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-semibold text-lg text-gray-900 mb-2">Le mariage traditionnel Luba</h3>
+            <p class="text-gray-600 text-sm mb-2">Plongez dans les rites et festivités du mariage chez les Luba, symbole d’union et de partage.</p>
+            <span class="text-xs text-orange-600 font-semibold">Rite Luba</span>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-0 flex flex-col overflow-hidden border border-gray-100">
+          <div class="h-40 w-full bg-gray-200 flex items-center justify-center">
+            <!-- IMAGE COUTUME 3 -->
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-semibold text-lg text-gray-900 mb-2">La fête du tam-tam</h3>
+            <p class="text-gray-600 text-sm mb-2">Célébration musicale et dansante, le tam-tam rythme les grands événements de la communauté.</p>
+            <span class="text-xs text-orange-600 font-semibold">Fête populaire</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION AUTEURS -->
+    <section id="auteurs" class="max-w-6xl mx-auto mt-20 px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Auteurs & gardiens du patrimoine</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-md p-7 flex flex-col items-center text-center border border-gray-100">
+          <!-- IMAGE AUTEUR -->
+          <div class="w-20 h-20 rounded-full bg-gray-200 mb-4 overflow-hidden">
+            <!-- <img src="..." alt="Auteur" class="w-full h-full object-cover"> -->
+          </div>
+          <h3 class="font-semibold text-lg text-gray-900 mb-1">M. Kabasele</h3>
+          <span class="text-xs text-orange-600 font-semibold mb-2">Conteur traditionnel</span>
+          <p class="text-gray-600 text-sm">"Transmettre les histoires de nos ancêtres, c’est préserver l’âme de notre peuple."</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-7 flex flex-col items-center text-center border border-gray-100">
+          <div class="w-20 h-20 rounded-full bg-gray-200 mb-4 overflow-hidden">
+            <!-- <img src="..." alt="Auteur" class="w-full h-full object-cover"> -->
+          </div>
+          <h3 class="font-semibold text-lg text-gray-900 mb-1">A. Mbuyi</h3>
+          <span class="text-xs text-orange-600 font-semibold mb-2">Collectrice de proverbes</span>
+          <p class="text-gray-600 text-sm">"Chaque proverbe est une graine de sagesse à semer dans le cœur des jeunes."</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-7 flex flex-col items-center text-center border border-gray-100">
+          <div class="w-20 h-20 rounded-full bg-gray-200 mb-4 overflow-hidden">
+            <!-- <img src="..." alt="Auteur" class="w-full h-full object-cover"> -->
+          </div>
+          <h3 class="font-semibold text-lg text-gray-900 mb-1">Sœur Marie-Claire</h3>
+          <span class="text-xs text-orange-600 font-semibold mb-2">Gardienne des coutumes</span>
+          <p class="text-gray-600 text-sm">"La tradition n’est pas le passé, c’est le souffle qui anime notre présent."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION COMMUNAUTÉ -->
+    <section id="communaute" class="max-w-6xl mx-auto mt-20 px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Notre communauté</h2>
+      <div class="bg-white rounded-2xl shadow-md p-10 flex flex-col md:flex-row items-center gap-8 border border-gray-100">
+        <div class="flex-1 flex flex-col gap-4">
+          <h3 class="text-xl font-bold text-orange-600 mb-2">Partage, transmission et fierté</h3>
+          <p class="text-gray-700 text-base mb-2">
+            Rejoignez une communauté vivante qui valorise la diversité et la richesse du patrimoine oral congolais. Ici, chaque membre peut partager ses histoires, ses coutumes, ses proverbes et contribuer à la préservation de notre héritage.
+          </p>
+          <ul class="flex flex-col gap-2 text-gray-600 text-sm">
+            <li><i class="bx bx-check text-orange-500 mr-2"></i> Publiez vos propres récits et proverbes</li>
+            <li><i class="bx bx-check text-orange-500 mr-2"></i> Découvrez les traditions de toutes les régions</li>
+            <li><i class="bx bx-check text-orange-500 mr-2"></i> Échangez avec des passionnés et des experts</li>
+            <li><i class="bx bx-check text-orange-500 mr-2"></i> Participez à des événements et ateliers culturels</li>
+          </ul>
+        </div>
+        <div class="flex-1 flex flex-row gap-4 justify-center">
+          <!-- AVATARS COMMUNAUTÉ -->
+          <div class="w-16 h-16 rounded-full bg-gray-200 overflow-hidden border-2 border-orange-400">
+            <!-- <img src="..." alt="Membre" class="w-full h-full object-cover"> -->
+          </div>
+          <div class="w-16 h-16 rounded-full bg-gray-200 overflow-hidden border-2 border-orange-400">
+            <!-- <img src="..." alt="Membre" class="w-full h-full object-cover"> -->
+          </div>
+          <div class="w-16 h-16 rounded-full bg-gray-200 overflow-hidden border-2 border-orange-400">
+            <!-- <img src="..." alt="Membre" class="w-full h-full object-cover"> -->
+          </div>
+          <div class="w-16 h-16 rounded-full bg-gray-200 overflow-hidden border-2 border-orange-400">
+            <!-- <img src="..." alt="Membre" class="w-full h-full object-cover"> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-12 mt-20 bg-orange-50 rounded-3xl max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-8 shadow-lg border border-orange-100">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 md:mb-0 text-center md:text-left">Prêt à contribuer à la valorisation de la culture congolaise ?</h2>
+      <a href="register.html" class="px-8 py-3 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition">Créer un compte</a>
+    </section>
+
+    <!-- FOOTER (chargé dynamiquement) -->
+    <div id="footer-placeholder"></div>
+  </main>
+
+  <script type="module" src="../js/script.js"></script>
+  <script type="module" src="../js/load-components.js"></script>
+  <script src="../js/hero-carousel.js"></script>
+</body>
+</html>

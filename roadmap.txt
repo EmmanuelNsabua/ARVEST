@@ -1,0 +1,39 @@
+ARVEST/
+│
+├── assets/                # Images, sons, vidéos, icônes
+├── components/            # Composants réutilisables (header, footer, player, etc.)
+├── data/
+|__ dist/
+|   └── output.css                  # Fichiers JSON, exemples de contenus, langues, etc.
+├── js/
+│   ├── script.js
+│   ├── auth.js            # Gestion connexion/inscription
+│   ├── search.js          # Recherche avancée
+│   └── api.js             # Appels API (mock ou réel)
+├── node_modules
+|   ├── dist/
+|   |   ├── index.css
+|   |   ├── LICENCE
+|   |   ├── package.json
+|   |   ├── README.md
+|   |   ├── preflight.css
+|   |   ├── theme.css
+|   |   └── utilities
+|   ├── .package-lock.json
+├── style/
+│   ├── main.css
+│   ├── variables.css
+|   ├── input.css
+│   └── responsive.css
+├── views/
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── profile.html
+│   ├── explore.html
+│   ├── about.html
+│   └── admin.html
+├── README.md
+├── package-lock.json
+├── tailwind.config.js
+└── package.json           # (si tu utilises npm pour outils ou dépendances)

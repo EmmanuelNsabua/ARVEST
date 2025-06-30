@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bibliothèque | Arvest Congo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../dist/output.css" />
+</head>
+<body class="bg-[#f5f8fa] font-poppins text-gray-800">
+  <!-- NAVBAR -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="w-full flex justify-center mt-24">
+    <div class="w-[85vw] max-w-6xl rounded-3xl overflow-hidden shadow-lg flex flex-col items-center bg-white py-12 px-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-orange-600 mb-4 text-center">Bibliothèque</h1>
+      <p class="text-lg text-gray-700 mb-6 text-center max-w-2xl">
+        Accédez à l'ensemble des contes, proverbes et coutumes du patrimoine congolais. Filtrez, explorez et découvrez la richesse de la culture orale.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button class="biblio-tab px-6 py-2 rounded-full bg-orange-500 text-white font-semibold shadow hover:bg-orange-600 transition active" data-tab="contes">
+          <i class="bx bx-book-open mr-2"></i>Contes
+        </button>
+        <button class="biblio-tab px-6 py-2 rounded-full bg-orange-100 text-orange-600 font-semibold shadow hover:bg-orange-200 transition" data-tab="proverbes">
+          <i class="bx bx-chat mr-2"></i>Proverbes
+        </button>
+        <button class="biblio-tab px-6 py-2 rounded-full bg-orange-100 text-orange-600 font-semibold shadow hover:bg-orange-200 transition" data-tab="coutumes">
+          <i class="bx bx-palette mr-2"></i>Coutumes
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTRES -->
+  <section class="w-[85vw] max-w-7xl mx-auto mt-10 px-2">
+    <div class="flex flex-wrap gap-4 items-center mb-6">
+      <input type="text" placeholder="Rechercher un titre, un auteur..." class="biblio-search px-4 py-2 rounded-full border border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-orange-400 text-sm w-64" />
+      <select class="biblio-filter px-4 py-2 rounded-full border border-gray-200 bg-gray-50 text-sm">
+        <option value="">Toutes les catégories</option>
+        <option value="animaux">Animaux</option>
+        <option value="famille">Famille</option>
+        <option value="sagesse">Sagesse</option>
+        <option value="amour">Amour</option>
+        <option value="nature">Nature</option>
+      </select>
+      <select class="biblio-filter px-4 py-2 rounded-full border border-gray-200 bg-gray-50 text-sm">
+        <option value="">Toutes les origines</option>
+        <option value="kongo">Kongo</option>
+        <option value="luba">Luba</option>
+        <option value="mongo">Mongo</option>
+        <option value="katanga">Katanga</option>
+      </select>
+      <select class="biblio-filter px-4 py-2 rounded-full border border-gray-200 bg-gray-50 text-sm">
+        <option value="">Toutes les langues</option>
+        <option value="fr">Français</option>
+        <option value="lingala">Lingala</option>
+        <option value="tshiluba">Tshiluba</option>
+        <option value="kikongo">Kikongo</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- CONTENU -->
+  <section class="w-[85vw] max-w-7xl mx-auto px-2">
+    <!-- Contes -->
+    <div id="biblio-contes" class="biblio-tab-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Exemple de carte conte -->
+      <div class="bg-white rounded-xl shadow p-5 flex flex-col gap-3 hover:shadow-lg transition">
+        <img src="../assets/Explorer/conte1.jpg" alt="Conte" class="rounded-lg h-40 w-full object-cover mb-2">
+        <h3 class="font-semibold text-lg text-[#1b263b]">Le léopard et la tortue</h3>
+        <p class="text-gray-600 text-sm">Un conte du Kasaï sur la ruse et la sagesse face à la force brute.</p>
+        <div class="flex items-center gap-2 mt-2">
+          <span class="flex gap-1 text-orange-400 text-base">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bx-star"></i>
+          </span>
+          <span class="text-gray-700 text-sm">4.0</span>
+        </div>
+        <div class="flex gap-2 mt-2">
+          <span class="bg-orange-100 text-orange-600 px-2 py-1 rounded-full text-xs">Animaux</span>
+          <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs">Kasaï</span>
+        </div>
+      </div>
+      <!-- ... Duplique pour d'autres contes ... -->
+    </div>
+    <!-- Proverbes -->
+    <div id="biblio-proverbes" class="biblio-tab-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 hidden">
+      <div class="bg-white rounded-xl shadow p-5 flex flex-col gap-3 hover:shadow-lg transition">
+        <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mb-2">
+          <i class="bx bxs-quote-alt-left text-3xl text-orange-500"></i>
+        </div>
+        <h3 class="font-semibold text-lg text-[#1b263b]">« Le fleuve ne rejette jamais l’eau qui vient à lui. »</h3>
+        <p class="text-gray-600 text-sm">Proverbe Kongo</p>
+        <div class="flex gap-2 mt-2">
+          <span class="bg-orange-100 text-orange-600 px-2 py-1 rounded-full text-xs">Sagesse</span>
+          <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs">Kongo</span>
+        </div>
+      </div>
+      <!-- ... Duplique pour d'autres proverbes ... -->
+    </div>
+    <!-- Coutumes -->
+    <div id="biblio-coutumes" class="biblio-tab-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 hidden">
+      <div class="bg-white rounded-xl shadow p-5 flex flex-col gap-3 hover:shadow-lg transition">
+        <img src="../assets/Explorer/origine1.jpg" alt="Coutume" class="rounded-lg h-40 w-full object-cover mb-2">
+        <h3 class="font-semibold text-lg text-[#1b263b]">La dot chez les Bakongo</h3>
+        <p class="text-gray-600 text-sm">Découvrez les étapes et la symbolique de la dot dans la culture Bakongo.</p>
+        <div class="flex gap-2 mt-2">
+          <span class="bg-orange-100 text-orange-600 px-2 py-1 rounded-full text-xs">Tradition</span>
+          <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs">Bakongo</span>
+        </div>
+      </div>
+      <!-- ... Duplique pour d'autres coutumes ... -->
+    </div>
+  </section>
+
+  <script type="module" src="../js/script.js"></script>
+  <script type="module" src="../js/load-components.js"></script>
+  <script>
+    // Tabs
+    document.querySelectorAll('.biblio-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.biblio-tab').forEach(b => b.classList.remove('bg-orange-500', 'text-white', 'active'));
+        btn.classList.add('bg-orange-500', 'text-white', 'active');
+        document.querySelectorAll('.biblio-tab-content').forEach(tab => tab.classList.add('hidden'));
+        document.getElementById('biblio-' + btn.dataset.tab).classList.remove('hidden');
+      });
+    });
+    // (Optionnel) Ajoute ici le filtrage JS sur les cartes selon la recherche et les filtres
+  </script>
+</body>
+</html>

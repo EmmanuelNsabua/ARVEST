@@ -1,0 +1,24 @@
+{
+  "name": "arvest",
+  "version": "1.0.0",
+  "description": "**Arvest** est une plateforme numérique collaborative conçue pour préserver et valoriser le patrimoine culturel congolais (RDC). Véritable bibliothèque vivante, elle permet aux communautés locales d’archiver, de partager et de transmettre leurs contes, proverbes, maximes et arts traditionnels, menacés par la mondialisation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmanuelNsabua/ARVEST.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EmmanuelNsabua/ARVEST/issues"
+  },
+  "homepage": "https://github.com/EmmanuelNsabua/ARVEST#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  }
+}

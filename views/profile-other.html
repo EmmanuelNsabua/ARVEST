@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - Sophie M.</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="../style/main.css">
+</head>
+<body class="bg-gray-100 font-poppins min-h-screen">
+  <div id="navbar-placeholder" role="navigation"></div>
+
+  <!-- Bandeau de couverture -->
+  <div class="relative">
+    <img class="w-full object-cover object-cover h-64 lg:h-[50vh]" src="../assets/profile/cover2.jpg" alt="Bannière de couverture">
+  </div>
+  <!-- Contenu principal de la page de profil -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 py-6 md:translate-y-8 relative z-10 rounded-lg shadow-lg">
+    <!-- Carte de profil utilisateur -->
+    <aside class="md:col-span-1 bg-white p-4 shadow rounded -translate-y-48" role="profile">
+      <section class="text-center mt-6">
+        <!-- Photo de profil -->
+         <div class="w-28 h-28 rounded-full mx-auto mb-3 aspect-ssquare">
+            <img class="w-full h-full object-cover rounded-full" src="../assets/profile/profile2.jpg" alt="Photo de profil">
+         </div>
+         <!-- Nom et rôle -->
+          <h2 class="text-xl text-gray-900 font-semibold">Sophie M.</h2>
+          <p class="text-gray-500 text-sm">2.1k followers | 340 suivis </p>
+      </section>
+      <!-- Statistique de l'utilisateur -->
+      <div class="mt-6 grid grid-cols-3 text-center">
+        <div>
+          <p class="text-xl font-bold text-gray-900">8</p>
+          <p class="text-sm text-gray-500">Projets</p>
+        </div>
+        <div>
+          <p class="text-xl font-bold text-gray-900">22</p>
+          <p class="text-sm text-gray-500">Tâches</p>
+        </div>
+        <div>
+          <p class="text-xl font-bold text-gray-900">5</p>
+          <p class="text-sm text-gray-500">Publications</p>
+        </div>
+      </div>
+      <!-- Boutons d'action -->
+      <div class="mt-6 flex justify-center gap-4">
+        <button class="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-all duration-300"><i class='bx bx-user-plus'></i> Suivre</button>
+        <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-400 transition-all duration-300"><i class='bx bx-message'></i> Message</button>
+      </div>
+      <!-- Bloc infos supplémentaires UX -->
+      <div class="mt-8 text-left">
+        <h3 class="font-semibold text-[#1b263b] mb-2">À propos</h3>
+        <p class="text-gray-600 text-sm mb-2">Collectrice de proverbes, passionnée de culture orale africaine.</p>
+        <ul class="text-gray-500 text-sm space-y-1">
+          <li><i class='bx bx-map mr-1'></i> Kinshasa</li>
+          <li><i class='bx bx-globe mr-1'></i> Langues : Français, Lingala</li>
+          <li><i class='bx bx-calendar mr-1'></i> Membre depuis 2022</li>
+        </ul>
+      </div>
+      <!-- Bloc amis en commun -->
+      <div class="mt-8">
+        <h3 class="font-semibold text-[#1b263b] mb-2">Amis en commun</h3>
+        <div class="flex -space-x-3">
+          <img src="../assets/profile/profile.jpg" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="Emmanuel">
+          <img src="../assets/profile/profile3.jpg" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="Patrick">
+          <img src="../assets/profile/profile4.jpg" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="Isabelle">
+          <span class="w-8 h-8 flex items-center justify-center bg-gray-200 rounded-full text-xs text-gray-600 border-2 border-white">+2</span>
+        </div>
+      </div>
+    </aside>
+    <!-- Bloc principal des publications -->
+    <main class="md:col-span-2 bg-white p-4 shadow rounded -mt-48" role="main">
+      <section class="bg-white p-4 rounded-lg shadow mb-6">
+        <div class="flex items-start gap-4">
+          <!-- Avatar -->
+          <img src="../assets/profile/profile2.jpg" alt="avatar" class="w-10 h-10 rounded-full object-cover">
+          <!-- Remplacement du bloc "What's going on?" -->
+          <div class="flex-1">
+            <div class="bg-orange-50 rounded-lg px-4 py-3">
+              <p class="text-gray-700 text-sm">
+                <span class="font-semibold text-orange-600">Sophie M.</span> partage ici ses contes, proverbes et découvertes culturelles. 
+                <br>
+                <span class="text-xs text-gray-500">Vous pouvez consulter ses publications ci-dessous ou lui envoyer un message.</span>
+              </p>
+              <div class="flex gap-3 mt-3">
+                <button class="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-all duration-300 text-sm"><i class='bx bx-user-plus'></i> Suivre</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-400 transition-all duration-300 text-sm"><i class='bx bx-message'></i> Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Publications récentes -->
+      <section class="bg-white p-4 rounded-lg shadow mt-8">
+        <h2 class="text-lg font-semibold text-gray-800 mb-4">Publications de Sophie</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Carte 1 -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-md transition">
+            <img src="../assets/Explorer/proverbe1.jpg" alt="Proverbe" class="w-full h-40 object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-gray-800">« La patience est une vertu »</h3>
+              <p class="text-xs text-gray-500">Proverbe</p>
+            </div>
+          </div>
+          <!-- Carte 2 -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-md transition">
+            <img src="../assets/Explorer/conte2.jpg" alt="Conte" class="w-full h-40 object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-gray-800">La princesse et le crocodile</h3>
+              <p class="text-xs text-gray-500">Conte</p>
+            </div>
+          </div>
+          <!-- Carte 3 -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-md transition">
+            <img src="../assets/Explorer/offer-theme.jpg" alt="Thème" class="w-full h-40 object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-gray-800">Thème : Animaux</h3>
+              <p class="text-xs text-gray-500">Thème</p>
+            </div>
+          </div>
+          <!-- Carte 4 -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-md transition">
+            <img src="../assets/Explorer/proverbe2.jpg" alt="Proverbe" class="w-full h-40 object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-gray-800">« Un arbre seul ne fait pas la forêt. »</h3>
+              <p class="text-xs text-gray-500">Proverbe</p>
+            </div>
+          </div>
+          <!-- Carte 5 -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-md transition">
+            <img src="../assets/Explorer/conte3.jpg" alt="Conte" class="w-full h-40 object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-gray-800">Le singe et le tam-tam magique</h3>
+              <p class="text-xs text-gray-500">Conte</p>
+            </div>
+          </div>
+        </div>
+        <!-- Bouton charger plus -->
+        <div class="text-center mt-6">
+          <button class="px-6 py-2 bg-gray-200 text-sm text-gray-700 rounded hover:bg-gray-300 transition">
+            Charger plus
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="../js/script.js"></script>
+  <script type="module" src="../js/load-components.js"></script>
+</body>
+</html>

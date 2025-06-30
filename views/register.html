@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscription - Arvest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="style/login.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <!-- Logo image -->
+      <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="Logo Arvest" /></a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="explore.html">Explorer</a>
+        <a href="About.html">À propos</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <input type="text" placeholder="Rechercher..." />
+          <i class="bx bx-search"></i>
+        </div>
+        <a href="login.html"><button class="login-btn"><i class="bx bx-log-in"></i> Connexion</button></a>
+      </div>
+      <div class="nav-icons">
+        <div class="search-icon" id="search-toggle">
+          <i class="bx bx-search"></i>
+        </div>
+        <div class="burger-menu" id="burger-menu">
+          <i class="bx bx-menu" id="burger-icon"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="login-section">
+      <div class="login-card">
+        <h2 class="login-title"><i class="bx bx-user-plus"></i> Inscription</h2>
+        <div class="login-social">
+          <button type="button" class="btn social-btn google-btn">
+            <i class="bx bxl-google"></i> S'inscrire avec Google
+          </button>
+          <button type="button" class="btn social-btn facebook-btn">
+            <i class="bx bxl-facebook"></i> S'inscrire avec Facebook
+          </button>
+          <div class="login-divider"><span>ou</span></div>
+        </div>
+        <form class="login-form" autocomplete="off">
+          <div class="input-group">
+            <label for="register-email"><i class="bx bx-envelope"></i> Email</label>
+            <input type="email" id="register-email" name="email" placeholder="Votre email" required>
+          </div>
+          <div class="input-group">
+            <label for="register-username"><i class="bx bx-user"></i> Nom d'utilisateur</label>
+            <input type="text" id="register-username" name="username" placeholder="Votre nom d'utilisateur" required>
+          </div>
+          <div class="input-group">
+            <label for="register-password"><i class="bx bx-lock"></i> Mot de passe</label>
+            <input type="password" id="register-password" name="password" placeholder="Votre mot de passe" required>
+          </div>
+          <button type="submit" class="btn primary-btn login-submit"><i class="bx bx-user-plus"></i> S'inscrire</button>
+        </form>
+        <div class="login-links">
+          <a href="login.html">Déjà un compte ? Se connecter</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../js/auth.js"></script>
+  <script type="module" src="../js/search.js"></script>
+  <script type="module" src="../js/api.js"></script>
+  <script type="module" src="../js/script.js"></script>
+</body>
+</html>

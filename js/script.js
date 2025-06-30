@@ -1,57 +1,80 @@
-// Scroll: change navbar color on scroll
-window.addEventListener('scroll', () => {
-  const navbar = document.querySelector('.navbar');
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
-});
+import { isAuthenticated, getCurrentUser, logout } from './auth.js';
+import { fetchWorks } from './api.js'; 
+import { searchWorks } from './search.js';
 
-// Smooth nav menu slide from top on burger-menu click
-
-const burger = document.getElementById('burger-menu');
-const body = document.body;
-const navbar = document.querySelector('.navbar');
-const mainContent = document.querySelector('.main-content'); // Assure-toi que ton main a cette classe
-
-if (burger && navbar && mainContent) {
-  burger.addEventListener('click', () => {
-    body.classList.toggle('menu-open');
-    navbar.classList.toggle('menu-open');
-    mainContent.classList.toggle('menu-open');
-    // Change burger icon
-    const burgerIcon = document.getElementById('burger-icon');
-    if (burgerIcon) {
-      burgerIcon.classList.toggle('bx-menu');
-      burgerIcon.classList.toggle('bx-x');
+// Navbar: gestion du scroll (ajoute un fond sur scroll)
+document.addEventListener('navbarLoaded', async () => {
+  const navbar = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add('shadow', 'bg-white', 'backdrop-blur');
+    } else {
+      navbar.classList.remove('shadow', 'bg-white', 'backdrop-blur');
     }
   });
-}
 
-// Optional: close menu when clicking outside (mobile only)
-document.addEventListener('click', (e) => {
-  if (
-    body.classList.contains('menu-open') &&
-    !e.target.closest('.navbar') &&
-    !e.target.closest('#burger-menu')
-  ) {
-    body.classList.remove('menu-open');
-    if (navbar) navbar.classList.remove('menu-open');
-    const mainContent = document.querySelector('.main-content');
-    if (mainContent) mainContent.classList.remove('menu-open');
-    const burgerIcon = document.getElementById('burger-icon');
-    if (burgerIcon) {
-      burgerIcon.classList.add('bx-menu');
-      burgerIcon.classList.remove('bx-x');
-    }
+  // Burger menu mobile (affiche/masque le menu mobile)
+  const burger = document.getElementById('burger-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (burger && mobileMenu) {
+    burger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Recherche dynamique dans la navbar (si présente)
+  const searchInput = document.querySelector('header input[type="text"]');
+  // Ajoute ici ta logique de recherche si besoin
+
+  // Affichage du nom d'utilisateur ou bouton connexion (si tu veux l'adapter)
+  // const user = getCurrentUser();
+  // if (user) { ... }
+});
+
+// Carrousel horizontal (scroll avec boutons, tailwind)
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.carousel-nouveautes, .carousel-suggestions').forEach(carousel => {
+    carousel.addEventListener('wheel', e => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        carousel.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+  });
+});
+
+// Filtres catégories (boutons tailwind)
+document.addEventListener('DOMContentLoaded', () => {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('bg-orange-100', 'text-orange-600'));
+      btn.classList.add('bg-orange-100', 'text-orange-600');
+      // Ajoute ici le filtrage des éléments selon la catégorie
+    });
+  });
+});
+
+// (Optionnel) Affichage dynamique des œuvres (exemple tailwind)
+document.addEventListener('DOMContentLoaded', async () => {
+  const works = await fetchWorks();
+  const container = document.querySelector('.most-viewed-cards');
+  if (container) {
+    container.innerHTML = works.map(work => `
+      <div class="bg-white rounded-xl shadow p-5 flex flex-col gap-3 hover:shadow-lg transition">
+        <img src="../assets/about/index/conte1.jpg" alt="${work.title}" class="rounded-lg h-40 w-full object-cover mb-2">
+        <h3 class="font-semibold text-lg text-[#1b263b]">${work.title}</h3>
+        <div class="text-gray-700 text-sm">${work.type} • ${work.year}</div>
+      </div>
+    `).join('');
   }
 });
-
-// Search toggle (if floating search box exists)
-const searchToggle = document.getElementById('search-toggle');
-const searchBoxFloat = document.getElementById('search-box-float');
-if (searchToggle && searchBoxFloat) {
-  searchToggle.addEventListener('click', () => {
-    searchBoxFloat.classList.toggle('active');
-  });
-}
+          <div class="mv-card-meta">${work.type} • ${work.year}</div>
+        </div>
+      `).join('');
+    });
+  }
+});
 
 // Carousel scroll dynamique (pour les carrousels horizontaux)
 document.addEventListener('DOMContentLoaded', () => {
@@ -79,4 +102,19 @@ document.addEventListener('DOMContentLoaded', () => {
       // Ici tu peux ajouter le code pour filtrer les éléments de la catégorie
     });
   });
+});
+
+// Afficher les œuvres les plus vues dans la section "Most Viewed"
+document.addEventListener('DOMContentLoaded', async () => {
+  const works = await fetchWorks();
+  const container = document.querySelector('.most-viewed-cards');
+  if (container) {
+    container.innerHTML = works.map(work => `
+      <div class="mv-card">
+        <img src="../assets/about/index/conte1.jpg" alt="${work.title}">
+        <div class="mv-card-title">${work.title}</div>
+        <div class="mv-card-meta">${work.type} • ${work.year}</div>
+      </div>
+    `).join('');
+  }
 });
