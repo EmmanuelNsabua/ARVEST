@@ -10,6 +10,12 @@ const MOCK_WORKS = [
     year: 2023,
     rating: 4,
     language: "fr",
+    img: "../assets/Explorer/conte1.jpg",
+    content: "<p>Un conte du Kasaï sur la ruse et la sagesse face à la force brute.</p>",
+    likes: 12,
+    comments: [
+      { user: "Sophie M.", img: "../assets/profile/profile2.jpg", text: "Magnifique histoire !" }
+    ]
   },
   // ... autres œuvres mockées
 ];

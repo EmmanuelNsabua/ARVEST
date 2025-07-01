@@ -5,6 +5,7 @@ export function login(username, password) {
   // Simule une authentification (à remplacer par appel API)
   if (username === "demo" && password === "demo") {
     localStorage.setItem("arvest_user", JSON.stringify({ username }));
+    window.dispatchEvent(new Event('arvest:login-success')); // Ajout pour redirection
     return { success: true, user: { username } };
   }
   return { success: false, message: "Identifiants incorrects" };

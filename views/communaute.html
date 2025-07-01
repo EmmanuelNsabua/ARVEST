@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Communauté - Arvest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../dist/output.css" />
+</head>
+<body class="bg-[#f5f8fa] dark:bg-[#18181b] font-poppins min-h-screen">
+  <!-- NAVBAR dynamique -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="max-w-6xl mx-auto mt-24 px-4 pb-16">
+    <section class="bg-white dark:bg-[#23232b] rounded-3xl shadow-lg p-8 mb-12 flex flex-col md:flex-row gap-10 items-center">
+      <div class="flex-1 flex flex-col gap-4">
+        <h2 class="text-2xl font-bold text-orange-600 mb-2">Partage, transmission et fierté</h2>
+        <p class="text-gray-700 dark:text-gray-300 text-base mb-2">
+          Rejoignez une communauté vivante qui valorise la diversité et la richesse du patrimoine oral congolais. Ici, chaque membre peut partager ses histoires, ses coutumes, ses proverbes et contribuer à la préservation de notre héritage.
+        </p>
+        <ul class="flex flex-col gap-2 text-gray-600 dark:text-gray-400 text-sm">
+          <li><i class="bx bx-check text-orange-500 mr-2"></i> Publiez vos propres récits et proverbes</li>
+          <li><i class="bx bx-check text-orange-500 mr-2"></i> Découvrez les traditions de toutes les régions</li>
+          <li><i class="bx bx-check text-orange-500 mr-2"></i> Échangez avec des passionnés et des experts</li>
+          <li><i class="bx bx-check text-orange-500 mr-2"></i> Participez à des événements et ateliers culturels</li>
+        </ul>
+        <div class="flex gap-4 mt-6">
+          <a href="register.html" class="px-6 py-3 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition">Rejoindre la communauté</a>
+          <a href="events.html" class="px-6 py-3 border border-orange-500 text-orange-600 rounded-full font-semibold hover:bg-orange-50 transition">Voir les événements</a>
+        </div>
+      </div>
+      <div class="flex-1 flex flex-row gap-4 justify-center">
+        <!-- AVATARS COMMUNAUTÉ -->
+        <div class="w-20 h-20 rounded-full bg-gray-200 overflow-hidden border-2 border-orange-400">
+          <img src="../assets/profile/profile.jpg" alt="Membre" class="w-full h-full object-cover">
+        </div>
+        <div class="w-20 h-20 rounded-full bg-gray-200 overflow-hidden border-2 border-orange-400">
+          <img src="../assets/profile/profile2.jpg" alt="Membre" class="w-full h-full object-cover">
+        </div>
+        <div class="w-20 h-20 rounded-full bg-gray-200 overflow-hidden border-2 border-orange-400">
+          <img src="../assets/profile/profile3.jpg" alt="Membre" class="w-full h-full object-cover">
+        </div>
+        <div class="w-20 h-20 rounded-full bg-gray-200 overflow-hidden border-2 border-orange-400">
+          <img src="../assets/profile/profile4.jpg" alt="Membre" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </section>
+    <section class="mb-16">
+      <div id="communaute-members-list" class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Membres dynamiques -->
+      </div>
+    </section>
+    <section>
+      <div id="communaute-activity-list" class="flex flex-col gap-4">
+        <!-- Activités dynamiques -->
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script type="module" src="../js/load-components.js"></script>
+  <script type="module">
+    // Mock membres
+    const members = [
+      { name: "Emmanuel Nsabua", img: "../assets/profile/profile.jpg", role: "Conteur", desc: "Partage des contes du Kasaï." },
+      { name: "Sophie M.", img: "../assets/profile/profile2.jpg", role: "Collectrice de proverbes", desc: "Publie des proverbes chaque semaine." },
+      { name: "Patrick K.", img: "../assets/profile/profile3.jpg", role: "Gardien des coutumes", desc: "Explique les traditions Mongo." },
+      { name: "Isabelle T.", img: "../assets/profile/profile4.jpg", role: "Auteure", desc: "Écrit sur la solidarité africaine." }
+    ];
+    const activities = [
+      { user: "Sophie M.", img: "../assets/profile/profile2.jpg", action: "a publié un nouveau proverbe", time: "il y a 2 min" },
+      { user: "Emmanuel Nsabua", img: "../assets/profile/profile.jpg", action: "a partagé un conte", time: "il y a 10 min" },
+      { user: "Patrick K.", img: "../assets/profile/profile3.jpg", action: "a rejoint un événement", time: "il y a 1 h" },
+      { user: "Isabelle T.", img: "../assets/profile/profile4.jpg", action: "a commenté une histoire", time: "il y a 2 h" }
+    ];
+    function renderMembers() {
+      const list = document.getElementById('communaute-members-list');
+      list.innerHTML = members.map(m => `
+        <div class="bg-white dark:bg-[#23232b] rounded-xl shadow p-5 flex flex-col items-center text-center hover:shadow-lg transition">
+          <img src="${m.img}" alt="${m.name}" class="w-20 h-20 rounded-full object-cover border-2 border-orange-400 mb-3">
+          <h3 class="font-semibold text-lg text-[#1b263b]">${m.name}</h3>
+          <span class="text-xs text-orange-600 font-semibold mb-1">${m.role}</span>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">${m.desc}</p>
+        </div>
+      `).join('');
+    }
+    function renderActivities() {
+      const list = document.getElementById('communaute-activity-list');
+      list.innerHTML = activities.map(a => `
+        <div class="flex items-center gap-4 bg-white dark:bg-[#23232b] rounded-xl shadow p-4">
+          <img src="${a.img}" alt="${a.user}" class="w-12 h-12 rounded-full object-cover">
+          <div>
+            <span class="font-semibold text-orange-600">${a.user}</span> ${a.action}
+            <div class="text-xs text-gray-400">${a.time}</div>
+          </div>
+        </div>
+      `).join('');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      renderMembers();
+      renderActivities();
+    });
+  </script>
+</body>
+</html>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderMembers();
+      renderActivities();
+    });
+  </script>
+</body>
+</html>

@@ -1,4 +1,5 @@
-// Recherche simple sur des données mockées (à remplacer par API plus tard)
+// Recherche simple sur les œuvres.
+// (aucune modification nécessaire pour la logique actuelle)
 
 export function searchWorks(query, works) {
   if (!query) return works;

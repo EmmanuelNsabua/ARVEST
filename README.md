@@ -6,7 +6,7 @@
 
 Arvest est née du constat que de nombreux récits, proverbes, chants, traditions et savoir-faire congolais risquent de disparaître, faute de transmission intergénérationnelle et de valorisation dans l’espace numérique. La plateforme vise à offrir un espace moderne, accessible et sécurisé où chaque membre de la communauté congolaise, qu’il soit au pays ou dans la diaspora, peut contribuer à la sauvegarde de ce patrimoine inestimable.
 
-Arvest fonctionne comme une bibliothèque numérique évolutive : chaque utilisateur peut publier des contes, des proverbes, des récits, des images, des enregistrements audio ou vidéo, et enrichir les fiches existantes par des commentaires, des variantes ou des traductions. Les contenus sont organisés par catégories (contes, proverbes, coutumes, etc.), par thèmes, par langues et par régions, facilitant ainsi la recherche et la découverte.
+Arvest fonctionne comme une bibliothèque numérique évolutive : chaque utilisateur peut publier des contes, des proverbes, des récits, des images, et enrichir les fiches existantes par des commentaires, des variantes ou des traductions. Les contenus sont organisés par catégories (contes, proverbes, coutumes, etc.), par thèmes, par langues et par régions, facilitant ainsi la recherche et la découverte.
 
 La validation communautaire est au cœur du projet : des anciens, des experts locaux et des membres actifs peuvent valider, commenter ou compléter les contenus, assurant ainsi leur authenticité et leur qualité. Arvest encourage également la création de profils d’auteurs, la mise en avant des conteurs et gardiens de la tradition, et la suggestion de nouveaux contenus à découvrir.
 
@@ -51,7 +51,36 @@ La validation communautaire est au cœur du projet : des anciens, des experts 
 - Plateforme utilisée dans plusieurs écoles et associations culturelles.
 - Ambition : devenir la référence culturelle numérique de la RDC d’ici 2025.
 
----
+## Organisation du système et expérience utilisateur
 
-Arvest, c’est bien plus qu’un site web : c’est un projet de société, un outil de transmission et de fierté, un espace où chaque voix compte pour préserver la mémoire collective du Congo.
+Lorsqu’un utilisateur recherche la plateforme Arvest sur Google ou tout autre moteur de recherche, il est dirigé vers la page d’accueil (`index.html`). Cette partie d’accueil offre un avant-goût de la plateforme, présentant les grandes rubriques à travers les pages Accueil, Explorer (`bibliotheque.html`), À propos et mettant en avant la richesse du patrimoine congolais à travers des extraits, des œuvres populaires et des témoignages.
+
+Si l’utilisateur souhaite aller plus loin, il peut s’inscrire ou se connecter grâce aux boutons dédiés dans la barre de navigation (un bouton d’inscription est à ajouter à côté du bouton de connexion). Après avoir renseigné ses informations, il accède à la plateforme en mode utilisateur.
+
+En mode utilisateur, la première page affichée est la page d’accueil personnalisée (`explore.html`). Le menu de navigation propose alors :
+- **Accueil** : affichage dynamique des œuvres publiées, classées par pertinence (plus vues, validées par la communauté, etc.), avec possibilité de cliquer pour lire, aimer, partager, commenter…
+- **Bibliothèque** : accès à toutes les œuvres, classées par catégories, thèmes, langues, régions, pour une découverte structurée et rapide.
+- **Communauté** (à développer) : espace pour découvrir les membres actifs, les auteurs, les discussions et les suggestions.
+- **Recherche** : moteur de recherche global pour trouver rapidement une œuvre, un auteur, un thème…
+
+## Page de lecture (à développer)
+
+Chaque œuvre dispose d’une page dédiée pour la lecture, l’écoute ou le visionnage, avec interactions sociales (like, partage, commentaire).
+
+## Profils 
+
+- **Profil utilisateur** : Accessible en cliquant sur l’avatar, avec toutes les fonctionnalités d’une vraie page profil (publications, statistiques, suggestions, paramètres…).
+- **Profil d’un autre utilisateur** : accessible en cliquant sur l’avatar ou le nom d’un autre membre.
+
+> **Remarque** : Le mode utilisateur s’inspire de l’ergonomie des forums modernes, mais Arvest n’est pas un forum de discussion. L’accent est mis sur la valorisation, la transmission et la validation communautaire du patrimoine.
+
+## Ce qui rend Arvest unique
+
+- **Valorisation du patrimoine congolais** : Arvest est la seule plateforme à proposer une bibliothèque vivante, évolutive et validée par la communauté, dédiée exclusivement à la culture congolaise.
+- **Validation communautaire et transmission intergénérationnelle** : Les anciens, experts et membres actifs jouent un rôle clé dans la validation et la transmission des savoirs.
+- **Navigation multicritère et expérience immersive** : Découverte par catégories, thèmes, langues, régions, auteurs, avec une interface moderne et adaptée à tous les supports.
+- **Mise en avant des auteurs et des gardiens de la tradition** : Chaque contributeur peut créer un profil, être reconnu et valorisé.
+- **Ouverture et diversité** : Plus de 200 langues et ethnies représentées, avec une volonté d’inclure toutes les voix et toutes les variantes culturelles.
+
+Arvest n’est pas seulement un site web, c’est un projet de société, un outil de transmission, de fierté et de lien entre générations, qui place la culture congolaise au cœur du numérique.
 

@@ -1,0 +1,76 @@
+ARVEST/
+├── components/
+│   ├── navbar.html
+│   ├── footer.html (à styliser avec Tailwind CSS, à inclure uniquement dans les pages publiques)
+│   └── ...
+├── data/
+│   └── ... (données statiques, mock, seeds)
+├── dist/
+│   └── output.css
+├── node_modules/
+│   └── ...
+├── js/
+│   ├── api.js
+│   ├── auth.js
+│   ├── explore-publications.js
+│   ├── hero-carousel.js
+│   ├── load-components.js
+│   ├── script.js
+│   ├── search.js
+│   ├── notifications.js
+│   ├── validation.js
+│   ├── messages.js
+│   ├── lecture.js
+│   ├── communaute.js
+│   └── ...
+├── style/
+│   ├── input.css
+│   ├── main.css
+│   └── ...
+├── views/
+│   ├── index.html
+│   ├── bibliotheque.html
+│   ├── explore.html
+│   ├── profile.html
+│   ├── profile-other.html
+│   ├── About.html
+│   ├── register.html
+│   ├── lecture.html
+│   ├── notifications.html
+│   ├── messages.html
+│   ├── communaute.html
+│   ├── events.html
+│   ├── map.html
+│   └── ...
+├── notifications/
+│   ├── notifications.html
+│   └── notifications.js
+├── messages/
+│   ├── inbox.html
+│   ├── conversation.html
+│   └── messages.js
+├── moderation/
+│   ├── validation.html
+│   └── moderation.js
+├── events/
+│   ├── events.html
+│   └── events.js
+├── map/
+│   ├── map.html
+│   └── map.js
+├── settings/
+│   ├── privacy.html
+│   ├── account.html
+│   └── settings.js
+├── i18n/
+│   ├── fr.json
+│   ├── en.json
+│   └── ln.json
+├── tests/
+│   ├── unit/
+│   └── integration/
+├── README.md
+├── structure.txt
+├── package.json
+├── tailwind.config.js
+└── ...

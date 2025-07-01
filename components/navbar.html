@@ -10,19 +10,25 @@
     <nav class="hidden md:flex gap-8 text-gray-700 font-medium">
       <a href="index.html" class="hover:text-orange-600 transition">Accueil</a>
       <a href="bibliotheque.html" class="hover:text-orange-600 transition">Bibliothèque</a>
+      <a href="explore.html" class="hover:text-orange-600 transition">Explorer</a>
+      <a href="communaute.html" class="hover:text-orange-600 transition">Communauté</a>
       <a href="About.html" class="hover:text-orange-600 transition">À propos</a>
     </nav>
     <!-- Actions -->
-    <div class="hidden md:flex items-center gap-4">
-      <div class="relative">
-        <input type="text" placeholder="Rechercher..." class="pl-10 pr-3 py-2 rounded-full bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-400 transition w-48" />
-        <i class="bx bx-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
-      </div>
-      <form action="login.html" method="get">
+    <div class="hidden md:flex items-center gap-4" id="navbar-actions">
+      <!-- Actions dynamiques selon connexion -->
+      <!-- Si non connecté, affiche Inscription ET Connexion -->
+      <form action="register.html" method="get">
         <button class="flex items-center gap-2 px-5 py-2 rounded-full bg-orange-500 text-white font-semibold hover:bg-orange-600 transition">
+          <i class="bx bx-user-plus"></i> Inscription
+        </button>
+      </form>
+      <form action="register.html" method="get">
+        <button class="flex items-center gap-2 px-5 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold hover:bg-gray-400 transition">
           <i class="bx bx-log-in"></i> Connexion
         </button>
       </form>
+      <!-- Si connecté, ces boutons seront remplacés dynamiquement par JS -->
     </div>
     <!-- Mobile icons -->
     <div class="flex md:hidden items-center gap-2">
@@ -39,17 +45,39 @@
     <nav class="flex flex-col gap-2 px-6 py-4 text-gray-700 font-medium">
       <a href="index.html" class="py-2 hover:text-orange-600 transition">Accueil</a>
       <a href="bibliotheque.html" class="py-2 hover:text-orange-600 transition">Bibliothèque</a>
+      <a href="explore.html" class="py-2 hover:text-orange-600 transition">Explorer</a>
+      <a href="communaute.html" class="py-2 hover:text-orange-600 transition">Communauté</a>
       <a href="About.html" class="py-2 hover:text-orange-600 transition">À propos</a>
-      <form action="login.html" method="get" class="mt-2">
-        <button class="w-full flex items-center gap-2 px-5 py-2 rounded-full bg-orange-500 text-white font-semibold hover:bg-orange-600 transition">
-          <i class="bx bx-log-in"></i> Connexion
-        </button>
-      </form>
+      <div id="mobile-navbar-actions" class="mt-2 flex flex-col gap-2">
+        <!-- Actions dynamiques selon connexion -->
+        <form action="register.html" method="get">
+          <button class="w-full flex items-center gap-2 px-5 py-2 rounded-full bg-orange-500 text-white font-semibold hover:bg-orange-600 transition">
+            <i class="bx bx-user-plus"></i> Inscription
+          </button>
+        </form>
+        <form action="register.html" method="get">
+          <button class="w-full flex items-center gap-2 px-5 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold hover:bg-gray-400 transition">
+            <i class="bx bx-log-in"></i> Connexion
+          </button>
+        </form>
+      </div>
       <div class="relative mt-2">
         <input type="text" placeholder="Rechercher..." class="pl-10 pr-3 py-2 rounded-full bg-gray-100 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-400 transition w-full" />
         <i class="bx bx-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
       </div>
     </nav>
   </div>
-  <script type="module" src="../js/script.js"></script>
+  <script type="module">
+    // Burger menu mobile toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.getElementById('burger-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (burger && mobileMenu) {
+        burger.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+  <script type="module" src="../js/navbar.js"></script>
 </header>

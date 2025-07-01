@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture | Arvest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../dist/output.css" />
+</head>
+<body class="bg-[#f5f8fa] font-poppins text-gray-800 dark:text-gray-100 min-h-screen">
+  <!-- NAVBAR dynamique -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="max-w-4xl mx-auto mt-24 px-4 pb-16">
+    <!-- Header de l'œuvre -->
+    <section class="bg-white dark:bg-[#23232b] rounded-3xl shadow-lg p-8 mb-10 flex flex-col md:flex-row gap-8 items-center">
+      <img id="lecture-img" src="../assets/Explorer/conte1.jpg" alt="Illustration" class="w-40 h-40 rounded-2xl object-cover shadow-lg border-4 border-orange-100">
+      <div class="flex-1 flex flex-col gap-2">
+        <div class="flex items-center gap-2 mb-2">
+          <span id="lecture-type" class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-xs font-semibold">Conte</span>
+          <span id="lecture-theme" class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-semibold">Animaux</span>
+        </div>
+        <h1 id="lecture-title" class="text-3xl font-bold text-gray-900 mb-2">Titre du conte</h1>
+        <div class="flex items-center gap-4 text-sm text-gray-500 mb-2">
+          <span id="lecture-author"><i class="bx bx-user"></i> Auteur inconnu</span>
+          <span id="lecture-year"><i class="bx bx-calendar"></i> 2024</span>
+          <span id="lecture-lang"><i class="bx bx-globe"></i> Français</span>
+        </div>
+        <div class="flex items-center gap-2 mt-2">
+          <span class="flex gap-1 text-orange-400 text-base" id="lecture-rating">
+            <i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bx-star"></i><i class="bx bx-star"></i>
+          </span>
+          <span class="text-gray-700 text-sm" id="lecture-rating-value">3.0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Texte de l'œuvre -->
+    <section class="bg-white dark:bg-[#23232b] rounded-2xl shadow p-8 mb-10">
+      <article id="lecture-content" class="prose max-w-none text-gray-800 text-lg leading-relaxed">
+        <!-- Le texte de l'œuvre sera injecté ici dynamiquement -->
+        <p>Chargement...</p>
+      </article>
+    </section>
+
+    <!-- Actions utilisateur -->
+    <section class="flex flex-col md:flex-row gap-4 items-center justify-between mb-10">
+      <div class="flex gap-4">
+        <button id="like-btn" class="flex items-center gap-2 px-5 py-2 rounded-full bg-orange-500 text-white font-semibold hover:bg-orange-600 transition">
+          <i class="bx bx-heart"></i> <span id="like-count">0</span>
+        </button>
+        <button id="share-btn" class="flex items-center gap-2 px-5 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold hover:bg-gray-300 transition">
+          <i class="bx bx-share-alt"></i> Partager
+        </button>
+      </div>
+      <div class="flex gap-2 mt-4 md:mt-0">
+        <span class="text-xs text-gray-500">Publié par</span>
+        <span id="lecture-author2" class="font-semibold text-orange-600">Auteur inconnu</span>
+      </div>
+    </section>
+
+    <!-- Commentaires -->
+    <section class="bg-white dark:bg-[#23232b] rounded-2xl shadow p-8">
+      <h2 class="text-lg font-semibold text-gray-800 mb-4">Commentaires</h2>
+      <div id="comments-list" class="flex flex-col gap-4 mb-6">
+        <!-- Les commentaires seront injectés ici dynamiquement -->
+      </div>
+      <form id="comment-form" class="flex items-center gap-2">
+        <input type="text" id="comment-input" placeholder="Ajouter un commentaire..." class="flex-1 px-4 py-2 rounded-full border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+        <button type="submit" class="px-5 py-2 bg-orange-500 text-white rounded-full font-semibold hover:bg-orange-600 transition">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER dynamique -->
+  <div id="footer-placeholder"></div>
+
+  <script type="module" src="../js/load-components.js"></script>
+  <script type="module" src="../js/lecture.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confidentialité - Arvest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../dist/output.css" />
+</head>
+<body class="bg-[#f5f8fa] font-poppins min-h-screen">
+  <div id="navbar-placeholder"></div>
+  <main class="max-w-3xl mx-auto mt-24 px-4 pb-16">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8">Confidentialité</h1>
+    <section class="bg-white rounded-2xl shadow p-8">
+      <h2 class="text-xl font-semibold mb-4 text-orange-600">Vos données et votre vie privée</h2>
+      <p class="text-gray-700 mb-4">
+        Nous nous engageons à protéger vos informations personnelles. Vous pouvez gérer ici vos préférences de confidentialité.
+      </p>
+      <form id="privacy-form" class="flex flex-col gap-6">
+        <label class="flex items-center gap-3">
+          <input type="checkbox" class="accent-orange-500" checked>
+          Autoriser l'affichage de mon profil dans la communauté
+        </label>
+        <label class="flex items-center gap-3">
+          <input type="checkbox" class="accent-orange-500">
+          Recevoir des notifications par email
+        </label>
+        <label class="flex items-center gap-3">
+          <input type="checkbox" class="accent-orange-500">
+          Autoriser les messages privés
+        </label>
+        <div class="flex justify-end">
+          <button type="submit" class="px-6 py-2 bg-orange-500 text-white rounded font-semibold hover:bg-orange-600 transition">Enregistrer</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script type="module" src="../js/load-components.js"></script>
+  <script>
+    document.getElementById('privacy-form').onsubmit = e => {
+      e.preventDefault();
+      alert('Préférences de confidentialité enregistrées !');
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conversation - Arvest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../dist/output.css" />
+</head>
+<body class="bg-[#f5f8fa] font-poppins min-h-screen">
+  <div id="navbar-placeholder"></div>
+  <main class="max-w-3xl mx-auto mt-24 px-4 pb-16">
+    <div class="bg-white rounded-2xl shadow p-6 flex flex-col h-[600px]">
+      <div class="flex items-center gap-3 mb-4 border-b pb-3">
+        <img id="conv-user-img" src="../assets/profile/profile2.jpg" class="w-10 h-10 rounded-full object-cover" alt="User">
+        <div>
+          <div id="conv-user-name" class="font-semibold text-gray-900">Sophie M.</div>
+          <div class="text-xs text-gray-500">En ligne</div>
+        </div>
+      </div>
+      <div id="conv-messages-list" class="flex-1 flex flex-col gap-3 overflow-y-auto mb-4 px-1">
+        <!-- Messages dynamiques -->
+      </div>
+      <form id="conv-message-form" class="flex items-center gap-2 mt-auto">
+        <input type="text" id="conv-message-input" placeholder="Écrire un message..." class="flex-1 px-4 py-2 rounded-full border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+        <button type="submit" class="px-5 py-2 bg-orange-500 text-white rounded-full font-semibold hover:bg-orange-600 transition">Envoyer</button>
+      </form>
+    </div>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script type="module" src="../js/load-components.js"></script>
+  <script type="module" src="./messages.js"></script>
+  <script type="module">
+    // Conversation dynamique (exemple : Sophie M.)
+    const conv = {
+      id: 1,
+      name: "Sophie M.",
+      img: "../assets/profile/profile2.jpg",
+      messages: [
+        { from: "Sophie M.", img: "../assets/profile/profile2.jpg", text: "Merci pour ton conte !" },
+        { from: "Vous", img: "../assets/profile/profile.jpg", text: "Avec plaisir !" }
+      ]
+    };
+
+    function renderConv(conv) {
+      document.getElementById('conv-user-img').src = conv.img;
+      document.getElementById('conv-user-name').textContent = conv.name;
+      const list = document.getElementById('conv-messages-list');
+      list.innerHTML = conv.messages.map(m => `
+        <div class="flex ${m.from === 'Vous' ? 'justify-end' : 'justify-start'}">
+          <div class="flex items-end gap-2">
+            ${m.from !== 'Vous' ? `<img src="${m.img}" class="w-8 h-8 rounded-full object-cover" alt="${m.from}">` : ''}
+            <div class="px-4 py-2 rounded-2xl ${m.from === 'Vous' ? 'bg-orange-500 text-white' : 'bg-gray-100 text-gray-800'} shadow text-sm max-w-xs">${m.text}</div>
+            ${m.from === 'Vous' ? `<img src="${m.img}" class="w-8 h-8 rounded-full object-cover" alt="${m.from}">` : ''}
+          </div>
+        </div>
+      `).join('');
+      list.scrollTop = list.scrollHeight;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderConv(conv);
+      document.getElementById('conv-message-form').addEventListener('submit', e => {
+        e.preventDefault();
+        const input = document.getElementById('conv-message-input');
+        const val = input.value.trim();
+        if (!val) return;
+        conv.messages.push({ from: "Vous", img: "../assets/profile/profile.jpg", text: val });
+        renderConv(conv);
+        input.value = '';
+      });
+    });
+  </script>
+</body>
+</html>
